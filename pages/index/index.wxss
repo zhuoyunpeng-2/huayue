@@ -1,21 +1,89 @@
 /**index.wxss**/
-.userinfo {
+@import "../../wxParse/wxParse.wxss";
+
+.search{
+  width: 100%;
+  height: 100rpx;
+  background: #ededed;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
+.search .search-s{
+  width: 80%;
+  height: 60rpx;
+  display: flex;
+  background: #fff;
+  border-radius: 30rpx;
+  align-items: center;
+  font-size: 24rpx;
+}
+.search .search-s image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 10rpx;
+}
+.search .search-s input{
+  width: 400rpx;
+}
+.lb{
+  width: 100%;
+  height: 356rpx;
+}
+.lb .sw{
+  width: 100%;
+  height: 100%;
+}
+.lb .sw .sw-item{
+  width: 100%;
+  height: 100%;
+}
+.lb .sw .sw-item image{
+  width: 100%;
+  height: 100%;
+}
+.nav{
+  width: 100%;
+  height: 200rpx;
+  display: flex;
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+}
+.nav .nav-s{
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 26rpx;
+  color: #333;
+}
+.nav .nav-s image{
+  width: 80rpx;
+  height: 80rpx;
+}
+.dt{
+  width: 100%;
+  height: 254rpx;
+  text-align: center;
+}
+.dt image{
+  height: 100%;
+}
+.mx{
+  margin-top: 20rpx;
+  width: 100%;
+  height: 40rpx;
+  background: #fff;
+  border-left: 6rpx solid #000;
+  padding-left: 10rpx;
+}
+.mx-content .mx-content-s{
+  width: 220rpx;
+  height: 260rpx;
 }
 
-.userinfo-nickname {
-  color: #aaa;
-}
-
-.usermotto {
-  margin-top: 200px;
+.mx-content .mx-content-x{
+  width: 165rpx;
+  height: 200rpx;
 }

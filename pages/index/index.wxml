@@ -1,2 +1,82 @@
 <!--index.wxml-->
 
+<import src="../../wxParse/wxParse.wxml"/>
+<view class="home">
+<template is="wxParse" data="{{wxParseData:f1.nodes}}"/>
+<!-- 搜索框 -->
+<view class="search">
+<view class="search-s">
+<image src="../../images/search.png"></image>
+<input type="text" placeholder="{{sousuo}}"></input>
+</view>
+</view>
+<!-- 轮播 -->
+<view class="lb">
+<swiper class="sw" autoplay="true" indicator-dots="true" circular="true">
+<swiper-item class="sw-item">
+<image src="{{homeData.n238278973709656.data.n048934645629292.imgUrl}}"></image>
+</swiper-item>
+<swiper-item class="sw-item">
+<image src="{{homeData.n238278973709656.data.n2940542817148892.imgUrl}}"></image>
+</swiper-item>
+</swiper>
+</view>
+<!-- 导航组 -->
+<view class="nav">
+<view class="nav-s">
+<image src="{{homeData.n506465880410066.data.n2230623297542209.imgUrl}}"></image>
+<text>{{homeData.n506465880410066.data.n2230623297542209.text}}</text>
+</view>
+<view class="nav-s">
+<image src="{{homeData.n506465880410066.data.n082876742032989.imgUrl}}"></image>
+<text>{{homeData.n506465880410066.data.n082876742032989.text}}</text></view>
+<view class="nav-s">
+<image src="{{homeData.n506465880410066.data.n799973343339187.imgUrl}}"></image>
+<text>{{homeData.n506465880410066.data.n799973343339187.text}}</text></view>
+<view class="nav-s">
+<image src="{{homeData.n506465880410066.data.n1527859721827514.imgUrl}}"></image>
+<text>{{homeData.n506465880410066.data.n1527859721827514.text}}</text></view>
+<view class="nav-s">
+<image src="{{homeData.n506465880410066.data.n517910429657304.imgUrl}}"></image>
+<text>{{homeData.n506465880410066.data.n517910429657304.text}}</text></view>
+</view>
+<!-- 单图组 -->
+<view class="dt">
+<image src="{{homeData.n928729983220629.data.n732637849194981.imgUrl}}"></image>
+</view>
+<!-- 一秒选花 -->
+<view class="mx">
+一秒选花
+</view>
+<view class="mx-content">
+<view class="mx-content-s">
+<text>{{homeData.n497354206492783.images.text_1}}</text>
+<image src="{{homeData.n497354206492783.images.image_1}}"></image>
+</view>
+<view class="mx-content-s">
+<text>{{homeData.n497354206492783.images.text_2}}</text>
+<image src="{{homeData.n497354206492783.images.image_2}}"></image>
+</view>
+<view class="mx-content-s">
+<text>{{homeData.n497354206492783.images.text_3}}</text>
+<image src="{{homeData.n497354206492783.images.image_3}}"></image>
+</view>
+<view class="mx-content-x">
+<text>{{homeData.n497354206492783.images.text_4}}</text>
+<image src="{{homeData.n497354206492783.images.image_4}}"></image>
+</view>
+<view class="mx-content-x">
+<text>{{homeData.n497354206492783.images.text_5}}</text>
+<image src="{{homeData.n497354206492783.images.image_5}}"></image>
+</view>
+<view class="mx-content-x">
+<text>{{homeData.n497354206492783.images.text_6}}</text>
+<image src="{{homeData.n497354206492783.images.image_6}}"></image>
+</view>
+<view class="mx-content-x">
+<text>{{homeData.n497354206492783.images.text_7}}</text>
+<image src="{{homeData.n497354206492783.images.image_7}}"></image>
+</view>
+</view>
+</view>
+
