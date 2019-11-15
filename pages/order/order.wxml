@@ -1,0 +1,77 @@
+<!--pages/order/order.wxml-->
+<view class="box">
+  <view class="top">
+    <view class="address">
+      <view class="left"></view>
+      <view class="right">
+        <text class="name">{{orderInfo.address.name+orderInfo.address.phone}}</text>
+        <text class="ad">{{orderInfo.address.region.province+' '+orderInfo.address.region.city+' '+orderInfo.address.region.region+' '+orderInfo.address.detail}}</text>
+      </view>
+    </view>
+    <view class="select">
+    </view>
+  </view>
+  <view class="time" bindtap="selectTime">
+    <view class="left">送达时间:</view>
+    <view class="right">
+      <text>请选择</text>
+      <text class="jiantou"></text>
+    </view>
+  </view>
+  <view class="userinfo">
+    <view class="name">
+      <text>订花人姓名：</text>
+      <input placeholder="选填:  请填入您的姓名"></input>
+    </view>
+    <view class="tel">
+      <text>订花人电话：</text>
+      <input placeholder="选填:  请填入您的手机号"></input>
+    </view>
+  </view>
+  <view class="pro-info">
+    <view class="product" wx:for="{{orderInfo.goods_list}}" wx:key="index">
+      <image src="{{item.image[0].file_path}}"></image>
+      <view class="con">
+        <view class="goods_name">{{item.goods_name}}</view>
+        <view class="total">
+          <text class="price">￥{{item.goods_price}}</text>
+          <text class="num">x{{item.goods_total_weight}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="hj">
+      <view class="con">
+        <text class="num">共{{orderInfo.order_total_num}}件商品, 合计：</text>
+        <text class="total">￥{{orderInfo.order_total_price}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="ly">
+    <view class="text">贺卡留言：</view>
+    <input placeholder="请输入你的祝福留言(选填)"></input>
+    <view class="tuijian">
+      推荐>
+    </view>
+  </view>
+  <view class="other">
+    <view>
+      <view>商品总金额:</view>
+      <view class="total">￥{{orderInfo.order_total_price}}</view>
+    </view>
+    <view>
+      <view>优惠卷:</view>
+      <view>无优惠劵可用</view>
+    </view>
+    <view>
+      <view>配送费用:</view>
+      <view class="send">+￥0</view>
+    </view>
+  </view>
+  <view class="postorder">
+    <view class="text">
+      <text class="sfk">实付款：</text>
+      <text class="total">￥{{orderInfo.order_total_price}}</text>
+    </view>
+    <view class="button">提交订单</view>
+  </view>
+</view>

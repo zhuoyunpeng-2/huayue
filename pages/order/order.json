@@ -1,7 +1,7 @@
 {
   "navigationBarBackgroundColor": "#ffffff",
   "navigationBarTextStyle": "black",
-  "navigationBarTitleText": "购物车",
+  "navigationBarTitleText": "订单确认",
   "backgroundColor": "#eeeeee",
   "backgroundTextStyle": "light"
 }
