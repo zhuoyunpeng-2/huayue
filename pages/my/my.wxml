@@ -11,7 +11,7 @@
       <image src="../../images/text.png"></image>
       <text>全部订单</text>
     </view>
-    <view class="wait">
+    <view class="wait" bindtap="goGiveMoney">
       <image src="../../images/pay.png"></image>
       <text>待付款</text>
     </view>
@@ -39,7 +39,7 @@
 <!-- 指南 -->
 <view class="direction">
 <!-- 送花指南 -->
-<view class="giveflower">
+<view class="giveflower" bindtap="goSendFlower">
 <view class="left">
 <image src="../../images/tree.png"></image>
 <text>送花指南</text>
@@ -49,7 +49,7 @@
 </view>
 </view>
 <!-- 收货地址 -->
-<view class="location" wx:if="{{isShow}}">
+<view class="location" wx:if="{{isShow}}" bindtap="goAddress">
 <view class="left">
 <image src="../../images/location.png"></image>
 <text>收货地址</text>

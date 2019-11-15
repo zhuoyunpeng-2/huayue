@@ -72,6 +72,20 @@
 					"id": -1,
 					"name": "pages/my/my",
 					"pathName": "pages/my/my",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/sendFlower/sendFlower",
+					"pathName": "pages/sendFlower/sendFlower",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "order",
+					"pathName": "pages/orderDetail/orderDetail",
 					"scene": null
 				}
 			]

@@ -94,5 +94,16 @@ Page({
     this.setData({
       isshowModel: false
     })
+  },
+  goSendFlower(){
+    wx.navigateTo({
+      url: '/pages/sendFlower/sendFlower'
+    })
+  },
+  goAddress(){
+    //Address
+  },
+  goGiveMoney(){
+    //allOrder
   }
 })

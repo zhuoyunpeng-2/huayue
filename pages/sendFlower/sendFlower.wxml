@@ -1,0 +1,28 @@
+<!--pages/sendFlower/sendFlower.wxml-->
+<view class="flower">
+  <!-- 名称 -->
+  <view class="every" wx:for="{{flowerList}}">
+    <view class="title">
+      <view class="left">
+        <view class="null"></view>
+        <text>{{item.c_name}}</text>
+      </view>
+      <view class="right">
+        <text>全部>></text>
+      </view>
+    </view>
+    <!-- 花的类别 -->
+    <view class="category">
+      <view class="c_flower" wx:for="{{item.article}}">
+       <view class="left">
+       <image src="{{item.file_url}}"></image>
+       </view>
+       <view class="right">
+       <text class="problem">{{item.title}}</text>
+       <text class="content">{{item.content}}</text>
+       </view>
+      </view>
+    </view>
+    <view class="after"></view>
+  </view>
+</view>
