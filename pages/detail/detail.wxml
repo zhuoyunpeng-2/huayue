@@ -1,0 +1,88 @@
+<!--pages/detail/detail.wxml-->
+<import src="/wxParse/wxParse.wxml"/>
+<view class="detail">
+  <view class="topSwip">
+    <swiper autoplay="true" indicator-dots='true' circular='true'>
+        <swiper-item wx:for="{{detaiList.detail.image}}" wx:key="{{index}}">
+          <image src="{{item.file_path}}"></image>
+        </swiper-item>
+      </swiper>
+  </view>
+  <view class="middle">
+    <view class="mid-left">
+    
+      <view class="title">{{detaiList.detail.goods_name}}</view>
+    </view>
+    <button  open-type="share" class="mid-right"></button>
+ 
+  </view>
+  <view class="pri">
+    <view class="rPri">￥{{detaiList.detail.sku[0].goods_price}}</view>
+     <view class="bPri">￥{{detaiList.detail.sku[0].line_price}}</view>
+      <view class="xiaoliang">销量：{{detaiList.detail.sku[0].goods_sales}}             </view>
+  
+  </view>
+  
+  
+  
+  <!-- 底部 -->
+  <view class="cartBox">
+    <view class="kefu">
+      <image src="../../images/kefu.png"></image>
+    </view>
+    <view class="smallcart"  catchtap="gobuycart">
+      <image src="../../images/cart.png"></image>
+      <view class="Num">0</view>
+    </view>
+    <view class="addcar">加入购物车</view>
+    <view class="buynow">立即购买</view>
+  </view>
+
+  <!-- 评论 -->
+  <view class="comment">
+    <view class="com-title">
+      <view class='com-title-top'>评论({{detaiList.detail.comment_data_count}}条)</view>
+      <view class="more" catchtap="moreDetail" data-d='{{detaiList.detail.goods_id}}'>查看更多 ></view>
+    </view>
+    <view class="juti" wx:for="{{detaiList.detail.comment_data}}" wx:key='{{index}}'>
+      <view class="juti-top">
+        <view class="user">{{item.user.nickName}}</view>
+        <view class="start"> <image src="../../images/start.png" wx:for='{{5}}' wx:key='{{index}}'></image></view>
+      </view>
+      <view class="com-ps">{{item.content}}</view>
+    </view>
+  </view>
+
+  <!-- 花语 -->
+    <view class="huayu">
+      <view class="huayuBox">
+          <view class="yu">花语</view>
+          <view class="yu-cont">{{detaiList.detail.goods_mean}}</view>
+      </view>
+      <view class="huayuBox">
+          <view class="yu">材料</view>
+          <view class="yu-cont">{{detaiList.detail.goods_jianjie}}</view>
+      
+      </view>
+      <view class="huayuBox">
+          <view class="yu">配送</view>
+          <view class="yu-cont">{{detaiList.detail.delivery_area}}</view>
+      </view>
+      <view class="huayuBox">
+          <view class="yu">附送</view>
+          <view class="yu-cont1">{{detaiList.detail.free_send}}</view>
+      </view>
+    
+    
+    </view>
+
+    <!-- 商品描述 -->
+    <view class="product-ps">
+      <view class="pro-title">商品描述</view>
+      <view class="futext">
+        <template is="wxParse" data="{{wxParseData:productAll.nodes}}"/>
+      </view>
+      
+    
+    </view>
+</view>

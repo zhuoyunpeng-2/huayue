@@ -1,34 +1,34 @@
-// pages/my/my.js
+// pages/moreCom/moreCom.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    isShow:false,
-    isshowModel:false,
-    userInfo:''
+    detaiList: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    //判断是否登陆
-    var isLogin = wx.getStorageSync("isLogin");
-    if (!isLogin) {
-      //如果没有登录，显示登录框
-      this.setData({
-        isshowModel: true
-      })
-    } else {
-      //肯定已经含有用户信息了
-      this.setData({
-        isShow: true,
-        userInfo: wx.getStorageSync("userInfo")
-      })
-    }
-    
+    console.log(options)
+    var that = this
+    console.log(options)
+    wx.request({
+      url: 'https://hua512.com/?s=/api_wap/comment/lists&wxapp_id=10018&sign=2228aa244438551c61f9c929b9a9e8e0&token=&page=1',
+      data: {
+        "goods_id": options.id
+      },
+      success: function (res) {
+        var newarr = res.data.data.list.data
+        var arr = newarr.slice(1)
+        console.log(arr)
+        that.setData({
+          detaiList: arr
+        })
+      }
+    })
   },
 
   /**
@@ -42,8 +42,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
-  
+
   },
 
   /**
@@ -80,19 +79,6 @@ Page({
   onShareAppMessage: function () {
 
   },
-  getUserInfo(res) {
-    console.log(res);
-    wx.setStorageSync("userInfo", res.detail.userInfo);
-    wx.setStorageSync("isLogin", true);
-    this.setData({
-      userInfo: wx.getStorageSync("userInfo"),
-      isShow: true,
-      isshowModel: false
-    })
-  },
-  cancle(){
-    this.setData({
-      isshowModel: false
-    })
-  }
+  
+  
 })

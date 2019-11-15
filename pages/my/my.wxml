@@ -1,2 +1,109 @@
 <!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<view class="my">
+  <!-- 头像背景 -->
+  <view class="bag  bg-blur">
+    <image src="{{userInfo.avatarUrl}}"></image>
+  </view>
+  <!-- 订单信息 -->
+  <view class="order">
+  <view class="left">
+   <view class="all">
+      <image src="../../images/text.png"></image>
+      <text>全部订单</text>
+    </view>
+    <view class="wait">
+      <image src="../../images/pay.png"></image>
+      <text>待付款</text>
+    </view>
+  </view>
+   
+   <view class="right">
+    <view class="get">
+      <image src="../../images/huocart.png"></image>
+      <text>待收货</text>
+    </view>
+    <view class="deal">
+      <image src="../../images/money.png"></image>
+      <text>退款/售后</text>
+    </view>
+
+   </view>
+   
+<!-- 头像 -->
+    <view class="info">
+    <image src="{{userInfo.avatarUrl}}"></image>
+    <text>{{userInfo.nickName}}</text>
+    </view>
+  </view>
+
+<!-- 指南 -->
+<view class="direction">
+<!-- 送花指南 -->
+<view class="giveflower">
+<view class="left">
+<image src="../../images/tree.png"></image>
+<text>送花指南</text>
+</view>
+<view class="right">
+<image src="../../images/right.png"></image>
+</view>
+</view>
+<!-- 收货地址 -->
+<view class="location" wx:if="{{isShow}}">
+<view class="left">
+<image src="../../images/location.png"></image>
+<text>收货地址</text>
+</view>
+<view class="right">
+<image src="../../images/right.png"></image>
+</view>
+</view>
+<!-- 领券中心 -->
+<view class="quan" wx:if="{{isShow}}">
+<view class="left">
+<image src="../../images/gift.png"></image>
+<text>领券中心</text>
+</view>
+<view class="right">
+<image src="../../images/right.png"></image>
+</view>
+</view>
+<!-- 我的优惠券 -->
+<view class="myquan" wx:if="{{isShow}}">
+<view class="left">
+<image src="../../images/discount.png"></image>
+<text>我的优惠券</text>
+</view>
+<view class="right">
+<image src="../../images/right.png"></image>
+</view>
+</view>
+<!-- 我的帮助 -->
+<view class="myhelp">
+<view class="left">
+<image src="../../images/problem.png"></image>
+<text>我的帮助</text>
+</view>
+<view class="right">
+<image src="../../images/right.png"></image>
+</view>
+</view>
+
+</view>
+ <!-- 蒙层 -->
+ <view class="modal" wx:if="{{isshowModel}}"></view>
+<!-- 登陆框 -->
+ <view class="login" wx:if="{{isshowModel}}">
+ <!-- 登陆提示 -->
+ <view class="title">
+ <text class="tit">登录提示</text>
+ <text class="desc">登录后才能更好的为你服务哦</text>
+ </view>
+ <!-- 按钮 -->
+ <view class="btn">
+ <button class="cancle" bindtap="cancle">取消</button>
+ <button class="sure" open-type="getUserInfo" bindgetuserinfo="getUserInfo">确定</button>
+ </view>
+ </view>
+
+</view>

@@ -1,34 +1,36 @@
-// pages/my/my.js
+// pages/allOrder/allOrder.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    isShow:false,
-    isshowModel:false,
-    userInfo:''
+    navList:["全部","待付款","待发货","待收货","待评价"],
+    productList:[],
+    currentIndex:0
   },
+  myshowModal(e){
+    var that=this
+    var index =e.currentTarget.dataset.id
+    that.setData({
+      currentIndex:index
+    })
 
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    //判断是否登陆
-    var isLogin = wx.getStorageSync("isLogin");
-    if (!isLogin) {
-      //如果没有登录，显示登录框
-      this.setData({
-        isshowModel: true
-      })
-    } else {
-      //肯定已经含有用户信息了
-      this.setData({
-        isShow: true,
-        userInfo: wx.getStorageSync("userInfo")
-      })
-    }
-    
+    var that=this
+    wx.request({
+      url: 'https://hua512.com/?s=api/user.order/lists&dataType=payment&wxapp_id=10001&token=4fb1a200e7dbd6ad9590a09842c7b5cd',
+      success:function(res){
+        console.log(res.data.data.list[0].goods[0].image)
+        that.setData({
+          productList:res.data.data.list[0]
+        })
+      }
+    })
   },
 
   /**
@@ -42,8 +44,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
-  
+
   },
 
   /**
@@ -79,20 +80,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  getUserInfo(res) {
-    console.log(res);
-    wx.setStorageSync("userInfo", res.detail.userInfo);
-    wx.setStorageSync("isLogin", true);
-    this.setData({
-      userInfo: wx.getStorageSync("userInfo"),
-      isShow: true,
-      isshowModel: false
-    })
-  },
-  cancle(){
-    this.setData({
-      isshowModel: false
-    })
   }
 })

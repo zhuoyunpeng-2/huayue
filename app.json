@@ -4,7 +4,14 @@
     "pages/category/category",
     "pages/cart/cart",
     "pages/my/my",
+<<<<<<< HEAD
     "pages/order/order"
+=======
+    "pages/detail/detail",
+    "pages/moreCom/moreCom",
+    "pages/selecteAddress/selecteAddress",
+    "pages/allOrder/allOrder"
+>>>>>>> ec9939d2e6881b0596d6a32b8827bbbacbdf5a65
   ],
   "window": {
     "backgroundTextStyle": "light",

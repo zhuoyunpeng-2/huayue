@@ -49,6 +49,7 @@
 一秒选花
 </view>
 <view class="mx-content">
+<view class="mx-content-top">
 <view class="mx-content-s">
 <text>{{homeData.n497354206492783.images.text_1}}</text>
 <image src="{{homeData.n497354206492783.images.image_1}}"></image>
@@ -61,6 +62,8 @@
 <text>{{homeData.n497354206492783.images.text_3}}</text>
 <image src="{{homeData.n497354206492783.images.image_3}}"></image>
 </view>
+</view>
+<view class="mx-content-bottom">
 <view class="mx-content-x">
 <text>{{homeData.n497354206492783.images.text_4}}</text>
 <image src="{{homeData.n497354206492783.images.image_4}}"></image>
@@ -77,6 +80,128 @@
 <text>{{homeData.n497354206492783.images.text_7}}</text>
 <image src="{{homeData.n497354206492783.images.image_7}}"></image>
 </view>
+</view>
+<!-- 文字导航 -->
+<view class="textNav">
+<view class="textNav-text" wx:for="{{homeData.n497354206492784.hot}}" wx:key="{{index}}">{{item.words}}</view>
+
+
+</view>
+</view>
+<!-- 热销 -->
+<view class="fuwenben">
+<template is="wxParse" data="{{wxParseData:f2.nodes}}"/>
+</view>
+<view class="rexiao">
+<view class="re-sp" wx:for="{{homeData.n7868426552844943.data}}" wx:key="{{index}}" bindtap="goDetail"data-id="{{item.goods_id}}">
+<view class="re-sp-top">
+<image src="{{item.image}}"></image>
+</view>
+<view class="re-sp-bottom">
+<view class="re-goods_name">{{item.goods_name}}</view>
+<view class="re-price">
+<view class="re-goods_price">￥{{item.goods_price}}</view>
+<view class="re-line_price">￥{{item.line_price}}</view>
+</view>
+</view>
+</view>
+</view>
+<!-- 家居花 -->
+<view class="fuwenben">
+<template is="wxParse" data="{{wxParseData:f3.nodes}}"/>
+</view>
+<view class="rexiao">
+<view class="re-sp" wx:for="{{homeData.n743578975142437.data}}" wx:key="{{index}}"  bindtap="goDetail"data-id="{{item.goods_id}}">
+<view class="re-sp-top">
+<image src="{{item.image}}"></image>
+</view>
+<view class="re-sp-bottom">
+<view class="re-goods_name">{{item.goods_name}}</view>
+<view class="re-price">
+<view class="re-goods_price">￥{{item.goods_price}}</view>
+<view class="re-line_price">￥{{item.line_price}}</view>
+</view>
+</view>
+</view>
+</view>
+<!-- 花篮 -->
+<view class="fuwenben">
+<template is="wxParse" data="{{wxParseData:f4.nodes}}"/>
+</view>
+<view class="rexiao">
+<view class="re-sp" wx:for="{{homeData.n3040059937766064.data}}" wx:key="{{index}}"  bindtap="goDetail"data-id="{{item.goods_id}}">
+<view class="re-sp-top">
+<image src="{{item.image}}"></image>
+</view>
+<view class="re-sp-bottom">
+<view class="re-goods_name">{{item.goods_name}}</view>
+<view class="re-price">
+<view class="re-goods_price">￥{{item.goods_price}}</view>
+<view class="re-line_price">￥{{item.line_price}}</view>
+</view>
+</view>
+</view>
+</view>
+<!-- 绿植 -->
+<view class="fuwenben">
+<template is="wxParse" data="{{wxParseData:f5.nodes}}"/>
+</view>
+<view class="rexiao">
+<view class="re-sp" wx:for="{{homeData.n399437367485191.data}}" wx:key="{{index}}"  bindtap="goDetail"data-id="{{item.goods_id}}">
+<view class="re-sp-top">
+<image src="{{item.image}}"></image>
+</view>
+<view class="re-sp-bottom">
+<view class="re-goods_name">{{item.goods_name}}</view>
+<view class="re-price">
+<view class="re-goods_price">￥{{item.goods_price}}</view>
+<view class="re-line_price">￥{{item.line_price}}</view>
+</view>
+</view>
+</view>
+</view>
+<!-- 花+ -->
+<view class="fuwenben">
+<template is="wxParse" data="{{wxParseData:f6.nodes}}"/>
+</view>
+<view class="rexiao">
+<view class="re-sp" wx:for="{{homeData.n698812156005581.data}}" wx:key="{{index}}"  bindtap="goDetail"data-id="{{item.goods_id}}">
+<view class="re-sp-top">
+<image src="{{item.image}}"></image>
+</view>
+<view class="re-sp-bottom">
+<view class="re-goods_name">{{item.goods_name}}</view>
+<view class="re-price">
+<view class="re-goods_price">￥{{item.goods_price}}</view>
+<view class="re-line_price">￥{{item.line_price}}</view>
+</view>
+</view>
+</view>
+</view>
+<!-- 永生花 -->
+<view class="fuwenben">
+<template is="wxParse" data="{{wxParseData:f7.nodes}}"/>
+</view>
+<view class="rexiao">
+<view class="re-sp" wx:for="{{homeData.n8882039651144535.data}}" wx:key="{{index}}"  bindtap="goDetail"data-id="{{item.goods_id}}">
+<view class="re-sp-top">
+<image src="{{item.image}}"></image>
+</view>
+<view class="re-sp-bottom">
+<view class="re-goods_name">{{item.goods_name}}</view>
+<view class="re-price">
+<view class="re-goods_price">￥{{item.goods_price}}</view>
+<view class="re-line_price">￥{{item.line_price}}</view>
+</view>
+</view>
+</view>
+</view>
+<!-- 客服电话 -->
+<view class="call">
+<image src="../../images/call.png"></image>
+</view>
+<view class="kefu">
+<image src="../../images/kefu.png"></image>
 </view>
 </view>
 

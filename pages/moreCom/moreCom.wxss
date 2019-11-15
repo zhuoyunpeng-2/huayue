@@ -1,0 +1,65 @@
+/* pages/moreCom/moreCom.wxss */
+.comment{
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rpx;
+  background: white;
+  padding: 0 20rpx;
+}
+.user-image{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  margin-right: 15rpx;
+}
+.user-image image{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.jutibox{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.juti{
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx 20rpx;
+  border-bottom: 1rpx solid #ccc;
+  height: 350rpx;
+  justify-content: center;
+  font-size: 28rpx;
+}
+.juti-top{
+  display: flex;
+  padding: 15rpx 0;
+  color: #ccc;
+  align-items: center;
+  padding-bottom: 20rpx;
+}
+.juti-top .user{
+  margin-right: 10rpx;
+}
+.comimg-box{
+  margin-top: 15rpx;
+  display: flex;
+}
+.com-img{
+  width: 180rpx;
+  height: 180rpx;
+  
+  margin-right: 15rpx;
+}
+.com-img image{
+  width: 100%;
+  height: 100%
+}
+.start{
+  display: flex
+}
+.start image{
+  width: 20rpx;
+  height: 20rpx;
+}

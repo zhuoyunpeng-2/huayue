@@ -1,0 +1,33 @@
+<!--pages/moreCom/moreCom.wxml-->
+<view class="comment">
+
+  <view class="juti" wx:for="{{detaiList}}" wx:key='{{index}}'>
+    <view class="jutibox">
+      <view class="juti-top">
+        <view class="user-image">
+          <image src="{{item.user.avatarUrl}}"></image>
+        </view>
+        <view class="user">{{item.user.nickName}}</view>
+        <view class="start">
+          <image src="../../images/start.png" wx:for='{{5}}' wx:key='{{index}}'></image>
+        </view>
+
+      </view>
+      <view class="juti-data">
+        <view>{{item.create_time}}</view>
+      </view>
+
+    </view>
+    <view class="com-ps">{{item.content}}</view>
+    <view class="comimg-box">
+      <view class="com-img" wx:for='{{item.image}}' wx:key='{{index}}'>
+        <image src="{{item.file_path}}"></image>
+      </view>
+
+    </view>
+
+
+  </view>
+
+
+</view>
