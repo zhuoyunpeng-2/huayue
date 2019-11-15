@@ -1,0 +1,231 @@
+/* pages/detail/detail.wxss */
+.detail{
+  background-color: rgb(230, 230, 230);
+  padding-bottom: 100rpx;
+}
+.topSwip{
+  width: 100%;
+  height: 825rpx;
+}
+.topSwip swiper{
+  width: 100%;
+  height: 100%;
+}
+.topSwip swiper swiper-item{
+  width: 100%;
+  height: 100%;
+}
+.topSwip swiper swiper-item image{
+  width: 100%;
+  height: 100%;
+}
+.mid-left{
+ padding: 20rpx 0 20rpx 20rpx;
+  text-align: left;
+  line-height: 48rpx;
+  box-sizing: border-box;
+  width: 100%;
+}
+.title{
+ 
+}
+.middle{
+  display: flex;
+  border-top: 1px solid rgb(211, 211, 211);
+      align-items: center;
+      background-color: white;
+}
+.mid-right{
+    width: 60rpx !important;
+    min-width: 2% !important;
+    height: 60rpx;
+    margin-right: 20rpx;
+    margin-left: 5rpx;
+    background: url("http://q0zwlopsi.bkt.clouddn.com/fenxiang.png")no-repeat center center;
+    background-size: 60rpx 60rpx;
+}
+.pri{
+  display: flex;
+  padding: 0rpx 20rpx 20rpx 20rpx;
+  align-items: center;
+  background-color: white;
+}
+.rPri{
+  color: #FF6700;
+  font-size: 38rpx;
+  margin-right: 10rpx;
+
+}
+.bPri{
+  text-decoration: line-through;
+  margin-right: 20rpx;
+  color: #B3B3B3;
+}
+.xiaoliang{
+  color: #B3B3B3
+}
+.cartBox{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  height: 108rpx;
+  background: white;
+  align-items: center;
+  justify-content: center;
+}
+.kefu{
+  width: 15%;
+  height: 100%;
+  position: relative;
+  border-right: 1rpx solid rgb(211, 211, 211)
+}
+.kefu image{
+  width: 50%;
+  height: 50%;
+   position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.smallcart{
+  width: 15%;
+  height: 100%;
+  position: relative
+}
+.smallcart image{
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+
+}
+.Num{
+  position: absolute;
+  right: 15rpx;
+  top: 15rpx;
+  background:  #FF538A;
+  width: 30rpx;
+  height: 30rpx;
+  text-align: center;
+  line-height: 30rpx;
+  border-radius: 50%;
+  color: white;
+  font-size: 24rpx;
+}
+.addcar{
+  width: 35%;
+  height: 100%;
+  text-align: center;
+  line-height: 108rpx;
+  background-color: rgb(255, 178, 63);
+  color: white;
+}
+.buynow{
+  width: 35%;
+  height: 100%;
+  text-align: center;
+  line-height: 108rpx;
+  background: #FF538A;
+  color: white
+}
+.comment{
+  display: flex;
+  flex-direction: column;
+  margin-top: 15rpx;
+  background: white;
+   height: 430rpx;
+  overflow: hidden;
+
+}
+.com-title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  padding: 0 15rpx;
+  border-bottom: 1rpx solid rgb(211, 211, 211);
+}
+.com-title-top{
+  line-height: 100rpx;
+  height: 100rpx;
+  font-size: 30rpx;
+}
+.more{
+ line-height: 100rpx;
+  height: 100rpx;
+}
+
+.juti{
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx 20rpx;
+  border-bottom: 1rpx solid rgb(211, 211, 211);
+  height: 150rpx;
+  justify-content: center;
+  font-size: 28rpx
+}
+.juti-top{
+  display: flex;
+  padding: 15rpx 0;
+  color: #ccc
+}
+.juti-top .user{
+  margin-right: 10rpx;
+}
+.start{
+  display: flex
+}
+.start image{
+  width: 20rpx;
+  height: 20rpx;
+}
+.huayu{
+   width: 100%;
+   background-color: white;
+   padding: 10rpx 20rpx;
+  box-sizing: border-box;
+  margin-top: 15rpx;
+}
+.huayuBox{
+ 
+  display: flex;
+  
+  
+  height:80rpx;
+  line-height: 80rpx;
+  align-items: center;
+}
+.yu{
+  margin-right: 15rpx;
+  width: 10%;
+}
+.yu-cont{
+  width: 90%;
+  padding: 10rpx 0;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid rgb(211, 211, 211);
+}
+yu-cont1{
+  width: 90%;
+  padding: 10rpx 0;
+  box-sizing: border-box;
+  border-bottom: none
+}
+
+.product-ps{
+  margin-top: 15rpx;
+  background-color: white;
+  padding: 20rpx;
+}
+.pro-title{
+  height: 60rpx;
+  line-height: 60rpx;
+}

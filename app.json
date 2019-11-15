@@ -3,7 +3,9 @@
     "pages/index/index",
     "pages/category/category",
     "pages/cart/cart",
-    "pages/my/my"
+    "pages/my/my",
+    "pages/detail/detail",
+    "pages/moreCom/moreCom"
   ],
   "window": {
     "backgroundTextStyle": "light",
