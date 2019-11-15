@@ -1,49 +1,38 @@
-// pages/detail/detail.js
-var WxParse = require('../../wxParse/wxParse.js');
+// pages/allOrder/allOrder.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-      id:null,
-      detaiList:[],
-      productAll:''
-      
+    navList:["全部","待付款","待发货","待收货","待评价"],
+    productList:[],
+    currentIndex:0
   },
+  myshowModal(e){
+    var that=this
+    var index =e.currentTarget.dataset.id
+    that.setData({
+      currentIndex:index
+    })
 
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that= this
-    console.log(options)
+    var that=this
     wx.request({
-      url: 'https://hua512.com/?s=/api_wap/goods/detail&wxapp_id=10018&sign=2228aa244438551c61f9c929b9a9e8e0&token=',
-      data:{
-        "goods_id":options.id
-      },
+      url: 'https://hua512.com/?s=api/user.order/lists&dataType=payment&wxapp_id=10001&token=4fb1a200e7dbd6ad9590a09842c7b5cd',
       success:function(res){
-        console.log(res.data.data.detail)
-       that.setData({
-          detaiList:res.data.data
+        console.log(res.data.data.list[0].goods[0].image)
+        that.setData({
+          productList:res.data.data.list[0]
         })
-        WxParse.wxParse('productAll', 'html', res.data.data.detail.content, that, 5);
       }
     })
   },
-  moreDetail(event){
-    var id = event.currentTarget.dataset.d;
-    console.log(id)
-    wx.navigateTo({
-      url: '/pages/moreCom/moreCom?id='+id
-      })
-  },
-  gobuycart(){
-    wx.switchTab({
-      url: '/pages/cart/cart',
-    })
-  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

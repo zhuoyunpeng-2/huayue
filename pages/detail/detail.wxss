@@ -1,7 +1,9 @@
 /* pages/detail/detail.wxss */
+/* @import "/wxParse/wxParse.wxss"; */
 .detail{
   background-color: rgb(230, 230, 230);
   padding-bottom: 100rpx;
+  box-sizing: border-box
 }
 .topSwip{
   width: 100%;
@@ -137,51 +139,51 @@
   color: white
 }
 .comment{
-  display: flex;
-  flex-direction: column;
-  margin-top: 15rpx;
-  background: white;
-   height: 430rpx;
-  overflow: hidden;
+  display: flex !important;
+  flex-direction: column !important;
+  margin-top: 15rpx !important;
+  background: white !important;
+   height: 430rpx !important;
+  overflow: hidden !important;
 
 }
-.com-title{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.comment .com-title{
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
   
-  padding: 0 15rpx;
-  border-bottom: 1rpx solid rgb(211, 211, 211);
+  padding: 0 15rpx !important;
+  border-bottom: 1rpx solid rgb(211, 211, 211) !important;
 }
-.com-title-top{
-  line-height: 100rpx;
-  height: 100rpx;
-  font-size: 30rpx;
+.comment .com-title .com-title-top{
+  line-height: 100rpx !important;
+  height: 100rpx !important;
+  font-size: 30rpx !important;
 }
-.more{
- line-height: 100rpx;
-  height: 100rpx;
+.comment .com-title .more{
+ line-height: 100rpx !important;
+  height: 100rpx !important;
 }
 
 .juti{
-  display: flex;
-  flex-direction: column;
-  padding: 20rpx 20rpx;
-  border-bottom: 1rpx solid rgb(211, 211, 211);
-  height: 150rpx;
-  justify-content: center;
-  font-size: 28rpx
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 20rpx 20rpx !important;
+  border-bottom: 1rpx solid rgb(211, 211, 211) !important;
+  height: 150rpx !important;
+  justify-content: center !important;
+  font-size: 28rpx !important
 }
-.juti-top{
-  display: flex;
-  padding: 15rpx 0;
-  color: #ccc
+.juti .juti-top{
+  display: flex !important;
+  padding: 15rpx 0 !important;
+  color: #ccc !important
 }
-.juti-top .user{
-  margin-right: 10rpx;
+.juti .juti-top .user{
+  margin-right: 10rpx !important;
 }
-.start{
-  display: flex
+.juti .juti-top .start{
+  display: flex !important
 }
 .start image{
   width: 20rpx;
@@ -212,20 +214,28 @@
   padding: 10rpx 0;
   box-sizing: border-box;
   border-bottom: 1rpx solid rgb(211, 211, 211);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 yu-cont1{
   width: 90%;
   padding: 10rpx 0;
   box-sizing: border-box;
-  border-bottom: none
+  border-bottom: none;
+  overflow: hidden;
+  text-overflow: ellipsis
 }
 
 .product-ps{
   margin-top: 15rpx;
   background-color: white;
-  padding: 20rpx;
+  padding-left: 10rpx;
 }
 .pro-title{
   height: 60rpx;
   line-height: 60rpx;
+}
+.futext{
+  font-size: 0;
 }

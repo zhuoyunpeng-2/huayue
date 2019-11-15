@@ -6,7 +6,8 @@
     "pages/my/my",
     "pages/detail/detail",
     "pages/moreCom/moreCom",
-    "pages/selecteAddress/selecteAddress"
+    "pages/selecteAddress/selecteAddress",
+    "pages/allOrder/allOrder"
   ],
   "window": {
     "backgroundTextStyle": "light",

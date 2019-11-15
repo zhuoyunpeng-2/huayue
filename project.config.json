@@ -56,18 +56,12 @@
 			"list": [
 				{
 					"id": -1,
-					"name": "pages/index/index",
-					"pathName": "pages/index/index",
 					"name": "pages/my/my",
 					"pathName": "pages/my/my",
 					"query": "",
 					"scene": null
 				},
 				{
-					"id": 1,
-					"name": "pages/detai/detail",
-					"pathName": "pages/detail/detail",
-					"query": "id=628",
 					"id": -1,
 					"name": "pages/selecteAddress/selecteAddress",
 					"pathName": "pages/selecteAddress/selecteAddress",
@@ -78,6 +72,21 @@
 					"id": -1,
 					"name": "pages/my/my",
 					"pathName": "pages/my/my",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "pages/detail/detail",
+					"pathName": "pages/detail/detail",
+					"query": "id=628",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/allOrder/allOrder",
+					"pathName": "pages/allOrder/allOrder",
+					"query": "",
 					"scene": null
 				}
 			]

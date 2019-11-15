@@ -1,4 +1,5 @@
 <!--pages/detail/detail.wxml-->
+<import src="/wxParse/wxParse.wxml"/>
 <view class="detail">
   <view class="topSwip">
     <swiper autoplay="true" indicator-dots='true' circular='true'>
@@ -29,7 +30,7 @@
     <view class="kefu">
       <image src="../../images/kefu.png"></image>
     </view>
-    <view class="smallcart">
+    <view class="smallcart"  catchtap="gobuycart">
       <image src="../../images/cart.png"></image>
       <view class="Num">0</view>
     </view>
@@ -68,7 +69,7 @@
           <view class="yu-cont">{{detaiList.detail.delivery_area}}</view>
       </view>
       <view class="huayuBox">
-          <view class="yu">配送</view>
+          <view class="yu">附送</view>
           <view class="yu-cont1">{{detaiList.detail.free_send}}</view>
       </view>
     
@@ -78,6 +79,9 @@
     <!-- 商品描述 -->
     <view class="product-ps">
       <view class="pro-title">商品描述</view>
+      <view class="futext">
+        <template is="wxParse" data="{{wxParseData:productAll.nodes}}"/>
+      </view>
       
     
     </view>
