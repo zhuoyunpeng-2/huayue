@@ -90,11 +90,13 @@ Page({
     wx.showModal({
       title: '提示',
       content: '确认取消订单？',
-      success:function(){
+      success:function(res){
         //allOrder
-        wx.navigateTo({
-          url: ''
-        })
+        if(res.confirm){
+          wx.navigateTo({
+            url: '/pages/allOrder/allOrder'
+          })
+        }
       }
     })
   }

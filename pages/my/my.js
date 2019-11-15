@@ -102,8 +102,14 @@ Page({
   },
   goAddress(){
     //Address
+    // wx.navigateTo({
+    //   url: '/pages/Address/Address',
+    // })
   },
   goGiveMoney(){
     //allOrder
+    wx.navigateTo({
+      url: '/pages/allOrder/allOrder',
+    })
   }
 })
