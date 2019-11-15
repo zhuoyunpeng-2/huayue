@@ -1,34 +1,18 @@
-// pages/my/my.js
+// pages/login/login.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    isShow:false,
-    isshowModel:false,
-    userInfo:''
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    //判断是否登陆
-    var isLogin = wx.getStorageSync("isLogin");
-    if (!isLogin) {
-      //如果没有登录，显示登录框
-      this.setData({
-        isshowModel: true
-      })
-    } else {
-      //肯定已经含有用户信息了
-      this.setData({
-        isShow: true,
-        userInfo: wx.getStorageSync("userInfo")
-      })
-    }
-    
+
   },
 
   /**
@@ -42,8 +26,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
-  
+
   },
 
   /**
@@ -80,19 +63,13 @@ Page({
   onShareAppMessage: function () {
 
   },
-  getUserInfo(res) {
+  getUserInfo(res){
     console.log(res);
     wx.setStorageSync("userInfo", res.detail.userInfo);
     wx.setStorageSync("isLogin", true);
-    this.setData({
-      userInfo: wx.getStorageSync("userInfo"),
-      isShow: true,
-      isshowModel: false
-    })
-  },
-  cancle(){
-    this.setData({
-      isshowModel: false
+    wx.navigateBack({
+
     })
   }
+  
 })
