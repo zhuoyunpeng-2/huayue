@@ -5,7 +5,8 @@
     "pages/cart/cart",
     "pages/my/my",
     "pages/detail/detail",
-    "pages/moreCom/moreCom"
+    "pages/moreCom/moreCom",
+    "pages/selecteAddress/selecteAddress"
   ],
   "window": {
     "backgroundTextStyle": "light",

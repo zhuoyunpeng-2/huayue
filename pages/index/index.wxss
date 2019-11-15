@@ -1,21 +1,238 @@
 /**index.wxss**/
-.userinfo {
+@import "../../wxParse/wxParse.wxss";
+.home{
+  box-sizing: border-box;
+}
+.search{
+  width: 100%;
+  height: 100rpx;
+  background: #ededed;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
+.search .search-s{
+  width: 80%;
+  height: 60rpx;
+  display: flex;
+  background: #fff;
+  border-radius: 30rpx;
+  align-items: center;
+  font-size: 24rpx;
+}
+.search .search-s image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 10rpx;
+}
+.search .search-s input{
+  width: 400rpx;
+}
+.lb{
+  width: 100%;
+  height: 356rpx;
+}
+.lb .sw{
+  width: 100%;
+  height: 100%;
+}
+.lb .sw .sw-item{
+  width: 100%;
+  height: 100%;
+}
+.lb .sw .sw-item image{
+  width: 100%;
+  height: 100%;
+}
+.nav{
+  width: 100%;
+  height: 200rpx;
+  display: flex;
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
+}
+.nav .nav-s{
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 26rpx;
+  color: #333;
+}
+.nav .nav-s image{
+  width: 80rpx;
+  height: 80rpx;
+}
+.dt{
+  width: 100%;
+  height: 254rpx;
+}
+.dt image{
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+.mx{
+  margin-top: 20rpx;
+  width: 100%;
+  height: 40rpx;
+  background: #fff;
+  border-left: 6rpx solid #000;
+  padding-left: 10rpx;
+}
+.mx-content{
+  width: 100%;
+  /* height: 948rpx; */
+  font-size: 24rpx;
+  box-sizing: border-box;
+}
+
+.mx-content .mx-content-top{
+  width: 100%;
+  height: 260rpx;
+  display: flex;
+  box-sizing: border-box;
+ padding: 0 10rpx;
+}
+.mx-content .mx-content-s{
+  width: 210rpx;
+  height: 260rpx;
+  border-radius: 10rpx;
+  position: relative;
+   padding: 0 10rpx;
+   overflow: hidden;
+}
+.mx-content .mx-content-s text{
+  width: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 10rpx;
+  text-align: center;
+}
+.mx-content .mx-content-s image{
+  width: 100%;
+  height: 100%;
+}
+
+.mx-content .mx-content-bottom{
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  padding: 0 10rpx;
+}
+
+.mx-content .mx-content-x{
+   position: relative;
+  width: 165rpx;
+  height: 200rpx;
+  padding: 0 10rpx;
+  border-radius: 10rpx;
+  margin-top: 20rpx;
+  overflow: hidden;
+}
+.mx-content .mx-content-x text{
+  position: absolute;
+  width: 100%;
+  display: block;
+  top: 10rpx;
+  right: 0;
+  text-align: center;
+}
+.mx-content .mx-content-x image{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.textNav{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.textNav .textNav-text{
+  width: calc(100% / 3);
+  text-align: center;
+  padding-top: 20rpx;
+}
+.fuwenben{
+  margin-top: 40rpx; 
+}
+.rexiao{
+  width: 100%;
+  margin-top: 20rpx;
+  padding-left: 10rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+.rexiao .re-sp{
+  width: 342rpx;
+  display: flex;
+  flex-direction: column;
+   padding: 0 10rpx;
+   margin-top: 20rpx;
+}
+.rexiao .re-sp .re-sp-top{
+  width: 100%;
+}
+.rexiao .re-sp .re-sp-top image{
+  width: 100%;
+  height: 357rpx;
+}
+.rexiao .re-sp .re-sp-bottom{
+  width: 100%;
+}
+.rexiao .re-sp .re-sp-bottom .re-goods_name{
+  width: 100%;
+  height: 30rpx;
+  font-size: 26rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.rexiao .re-sp .re-sp-bottom .re-price{
+  width: 100%;
+  display: flex;
+  font-size: 24rpx;
+  justify-content: space-between;
+  margin-top: 20rpx;
+}
+.rexiao .re-sp .re-sp-bottom .re-price .re-goods_price{
+  color: #ea625b;
+}
+.rexiao .re-sp .re-sp-bottom .re-price .re-line_price{
+  text-decoration: line-through;
+  color: #333;
+}
+.call{
+  width: 72rpx;
+  height: 72rpx;
+  background: #fff;
   border-radius: 50%;
+  position: fixed;
+  bottom: 200rpx;
+  right: 20rpx;
+  border: 2rpx solid #ccc;
+  text-align: center;
+  line-height: 72rpx;
 }
-
-.userinfo-nickname {
-  color: #aaa;
+.call image{
+  width: 90%;
+  height: 90%;
 }
-
-.usermotto {
-  margin-top: 200px;
+.kefu{
+  width: 72rpx;
+  height: 72rpx;
+  background: #fff;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 100rpx;
+  right: 20rpx;
+  border: 2rpx solid #ccc;
+  text-align: center;
+  line-height: 72rpx;
+}
+.kefu image{
+  width: 90%;
+  height: 90%;
 }
