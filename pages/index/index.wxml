@@ -1,2 +1,207 @@
 <!--index.wxml-->
 
+<import src="../../wxParse/wxParse.wxml"/>
+<view class="home">
+<template is="wxParse" data="{{wxParseData:f1.nodes}}"/>
+<!-- 搜索框 -->
+<view class="search">
+<view class="search-s">
+<image src="../../images/search.png"></image>
+<input type="text" placeholder="{{sousuo}}"></input>
+</view>
+</view>
+<!-- 轮播 -->
+<view class="lb">
+<swiper class="sw" autoplay="true" indicator-dots="true" circular="true">
+<swiper-item class="sw-item">
+<image src="{{homeData.n238278973709656.data.n048934645629292.imgUrl}}"></image>
+</swiper-item>
+<swiper-item class="sw-item">
+<image src="{{homeData.n238278973709656.data.n2940542817148892.imgUrl}}"></image>
+</swiper-item>
+</swiper>
+</view>
+<!-- 导航组 -->
+<view class="nav">
+<view class="nav-s">
+<image src="{{homeData.n506465880410066.data.n2230623297542209.imgUrl}}"></image>
+<text>{{homeData.n506465880410066.data.n2230623297542209.text}}</text>
+</view>
+<view class="nav-s">
+<image src="{{homeData.n506465880410066.data.n082876742032989.imgUrl}}"></image>
+<text>{{homeData.n506465880410066.data.n082876742032989.text}}</text></view>
+<view class="nav-s">
+<image src="{{homeData.n506465880410066.data.n799973343339187.imgUrl}}"></image>
+<text>{{homeData.n506465880410066.data.n799973343339187.text}}</text></view>
+<view class="nav-s">
+<image src="{{homeData.n506465880410066.data.n1527859721827514.imgUrl}}"></image>
+<text>{{homeData.n506465880410066.data.n1527859721827514.text}}</text></view>
+<view class="nav-s">
+<image src="{{homeData.n506465880410066.data.n517910429657304.imgUrl}}"></image>
+<text>{{homeData.n506465880410066.data.n517910429657304.text}}</text></view>
+</view>
+<!-- 单图组 -->
+<view class="dt">
+<image src="{{homeData.n928729983220629.data.n732637849194981.imgUrl}}"></image>
+</view>
+<!-- 一秒选花 -->
+<view class="mx">
+一秒选花
+</view>
+<view class="mx-content">
+<view class="mx-content-top">
+<view class="mx-content-s">
+<text>{{homeData.n497354206492783.images.text_1}}</text>
+<image src="{{homeData.n497354206492783.images.image_1}}"></image>
+</view>
+<view class="mx-content-s">
+<text>{{homeData.n497354206492783.images.text_2}}</text>
+<image src="{{homeData.n497354206492783.images.image_2}}"></image>
+</view>
+<view class="mx-content-s">
+<text>{{homeData.n497354206492783.images.text_3}}</text>
+<image src="{{homeData.n497354206492783.images.image_3}}"></image>
+</view>
+</view>
+<view class="mx-content-bottom">
+<view class="mx-content-x">
+<text>{{homeData.n497354206492783.images.text_4}}</text>
+<image src="{{homeData.n497354206492783.images.image_4}}"></image>
+</view>
+<view class="mx-content-x">
+<text>{{homeData.n497354206492783.images.text_5}}</text>
+<image src="{{homeData.n497354206492783.images.image_5}}"></image>
+</view>
+<view class="mx-content-x">
+<text>{{homeData.n497354206492783.images.text_6}}</text>
+<image src="{{homeData.n497354206492783.images.image_6}}"></image>
+</view>
+<view class="mx-content-x">
+<text>{{homeData.n497354206492783.images.text_7}}</text>
+<image src="{{homeData.n497354206492783.images.image_7}}"></image>
+</view>
+</view>
+<!-- 文字导航 -->
+<view class="textNav">
+<view class="textNav-text" wx:for="{{homeData.n497354206492784.hot}}" wx:key="{{index}}">{{item.words}}</view>
+
+
+</view>
+</view>
+<!-- 热销 -->
+<view class="fuwenben">
+<template is="wxParse" data="{{wxParseData:f2.nodes}}"/>
+</view>
+<view class="rexiao">
+<view class="re-sp" wx:for="{{homeData.n7868426552844943.data}}" wx:key="{{index}}" bindtap="goDetail"data-id="{{item.goods_id}}">
+<view class="re-sp-top">
+<image src="{{item.image}}"></image>
+</view>
+<view class="re-sp-bottom">
+<view class="re-goods_name">{{item.goods_name}}</view>
+<view class="re-price">
+<view class="re-goods_price">￥{{item.goods_price}}</view>
+<view class="re-line_price">￥{{item.line_price}}</view>
+</view>
+</view>
+</view>
+</view>
+<!-- 家居花 -->
+<view class="fuwenben">
+<template is="wxParse" data="{{wxParseData:f3.nodes}}"/>
+</view>
+<view class="rexiao">
+<view class="re-sp" wx:for="{{homeData.n743578975142437.data}}" wx:key="{{index}}"  bindtap="goDetail"data-id="{{item.goods_id}}">
+<view class="re-sp-top">
+<image src="{{item.image}}"></image>
+</view>
+<view class="re-sp-bottom">
+<view class="re-goods_name">{{item.goods_name}}</view>
+<view class="re-price">
+<view class="re-goods_price">￥{{item.goods_price}}</view>
+<view class="re-line_price">￥{{item.line_price}}</view>
+</view>
+</view>
+</view>
+</view>
+<!-- 花篮 -->
+<view class="fuwenben">
+<template is="wxParse" data="{{wxParseData:f4.nodes}}"/>
+</view>
+<view class="rexiao">
+<view class="re-sp" wx:for="{{homeData.n3040059937766064.data}}" wx:key="{{index}}"  bindtap="goDetail"data-id="{{item.goods_id}}">
+<view class="re-sp-top">
+<image src="{{item.image}}"></image>
+</view>
+<view class="re-sp-bottom">
+<view class="re-goods_name">{{item.goods_name}}</view>
+<view class="re-price">
+<view class="re-goods_price">￥{{item.goods_price}}</view>
+<view class="re-line_price">￥{{item.line_price}}</view>
+</view>
+</view>
+</view>
+</view>
+<!-- 绿植 -->
+<view class="fuwenben">
+<template is="wxParse" data="{{wxParseData:f5.nodes}}"/>
+</view>
+<view class="rexiao">
+<view class="re-sp" wx:for="{{homeData.n399437367485191.data}}" wx:key="{{index}}"  bindtap="goDetail"data-id="{{item.goods_id}}">
+<view class="re-sp-top">
+<image src="{{item.image}}"></image>
+</view>
+<view class="re-sp-bottom">
+<view class="re-goods_name">{{item.goods_name}}</view>
+<view class="re-price">
+<view class="re-goods_price">￥{{item.goods_price}}</view>
+<view class="re-line_price">￥{{item.line_price}}</view>
+</view>
+</view>
+</view>
+</view>
+<!-- 花+ -->
+<view class="fuwenben">
+<template is="wxParse" data="{{wxParseData:f6.nodes}}"/>
+</view>
+<view class="rexiao">
+<view class="re-sp" wx:for="{{homeData.n698812156005581.data}}" wx:key="{{index}}"  bindtap="goDetail"data-id="{{item.goods_id}}">
+<view class="re-sp-top">
+<image src="{{item.image}}"></image>
+</view>
+<view class="re-sp-bottom">
+<view class="re-goods_name">{{item.goods_name}}</view>
+<view class="re-price">
+<view class="re-goods_price">￥{{item.goods_price}}</view>
+<view class="re-line_price">￥{{item.line_price}}</view>
+</view>
+</view>
+</view>
+</view>
+<!-- 永生花 -->
+<view class="fuwenben">
+<template is="wxParse" data="{{wxParseData:f7.nodes}}"/>
+</view>
+<view class="rexiao">
+<view class="re-sp" wx:for="{{homeData.n8882039651144535.data}}" wx:key="{{index}}"  bindtap="goDetail"data-id="{{item.goods_id}}">
+<view class="re-sp-top">
+<image src="{{item.image}}"></image>
+</view>
+<view class="re-sp-bottom">
+<view class="re-goods_name">{{item.goods_name}}</view>
+<view class="re-price">
+<view class="re-goods_price">￥{{item.goods_price}}</view>
+<view class="re-line_price">￥{{item.line_price}}</view>
+</view>
+</view>
+</view>
+</view>
+<!-- 客服电话 -->
+<view class="call">
+<image src="../../images/call.png"></image>
+</view>
+<view class="kefu">
+<image src="../../images/kefu.png"></image>
+</view>
+</view>
+
