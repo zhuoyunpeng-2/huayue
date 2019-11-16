@@ -12,7 +12,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getOrderDetail().then((res)=>{
+    var id = options.id
+    console.log(id)
+    this.getOrderDetail(id).then((res)=>{
       console.log(res);
       this.setData({
         orderDetailList:res.data.data.order
@@ -68,12 +70,12 @@ Page({
   onShareAppMessage: function () {
 
   },
-  getOrderDetail(){
+  getOrderDetail(id){
     return new Promise((resolve,reject)=>{
       wx.request({
           url: 'https://hua512.com/?s=api/user.order/detail',
         data:{
-          order_id:'16307',
+          order_id:id,
           wxapp_id:"10001",
           token:'4fb1a200e7dbd6ad9590a09842c7b5cd'
         },

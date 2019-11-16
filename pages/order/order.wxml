@@ -1,6 +1,6 @@
 <!--pages/order/order.wxml-->
 <view class="box">
-  <view class="top">
+  <view class="top" bindtap="toselectadd">
     <view class="address">
       <view class="left"></view>
       <view class="right">
@@ -48,7 +48,7 @@
   </view>
   <view class="ly">
     <view class="text">贺卡留言：</view>
-    <input placeholder="请输入你的祝福留言(选填)"></input>
+    <input value="请输入你的祝福留言(选填)"></input>
     <view class="tuijian">
       推荐>
     </view>
@@ -73,5 +73,17 @@
       <text class="total">￥{{orderInfo.order_total_price}}</text>
     </view>
     <view class="button">提交订单</view>
+  </view>
+  <view class="return">
+    <view class="{{isShow?'open active':'open'}}" >
+      <image src="../../images/首页-选中.png" bindtap="toindex"></image>
+      <image src="../../images/分类 (1).png" bindtap="tocate"></image>
+      <image src="../../images/购物 车.png" bindtap="tocart"></image>
+      <image src="../../images/我 的.png" bindtap="tomy"></image>
+    </view>
+    <view class="box" bindtap="open" >
+      <image class="pic" animation="{{animationData}}" src="http://q0zw78ub3.bkt.clouddn.com/%E5%8A%A0%E5%8F%B7.png"></image>
+      <!-- <image class="pic1" src="../../images/叉号.png"></image> -->
+    </view>
   </view>
 </view>

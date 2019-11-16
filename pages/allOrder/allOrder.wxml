@@ -4,36 +4,36 @@
     <view bindtap="myshowModal" data-id="{{index}}" class="{{currentIndex===index?'all-nav on':'all-nav'}}" wx:for='{{navList}}' wx:key='{{index}}'>{{item}}
     </view>
   </view>
-  <view class="allpro" hidden="{{currentIndex>1}}">
+  <view class="allpro" hidden="{{currentIndex>1}}" wx:for="{{productList}}" wx:key="{{index}}">
     <view class="status">
       <view class="status-text">订单状态</view>
-      <view class="status-now">{{productList.pay_status.text}}</view>
+      <view class="status-now">{{item.pay_status.text}}</view>
     </view>
     <view class="orderId">
       <view class="order-id">
-         订单号:{{productList.order_no}}
+         订单号:{{item.order_no}}
       </view>
       <view class="order-data">
-        {{productList.create_time}}
+        {{item.create_time}}
       </view>
     
    </view>
-    <view class="pro-pos">
-      <view class="pro-img" wx:for="{{productList.goods}}" wx:key="{{index}}">
+    <view class="pro-pos" catchtap="godetail" data-id="{{item.order_id}}">
+      <view class="pro-img" wx:for="{{item.goods}}" wx:key="{{index}}">
       
          <image src="{{item.image.file_path}}"></image>
       
        
       </view>
       <view class="prosum">
-      共{{productList.goods.length}}件 >
+      共{{item.goods.length}}件 >
       </view>
     
     </view>
     <view class="sum">
       <view class="allPri">
         <view class="heji">合计：</view>
-        <view class="price">￥{{productList.pay_price}}</view>
+        <view class="price">￥{{item.pay_price}}</view>
       </view>
       <view class="isfukuan">
         <view class="cancel">取消</view>
