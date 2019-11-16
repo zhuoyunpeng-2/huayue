@@ -15,8 +15,26 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this
+    var id = options.id
     console.log(options.id);
-    addressList("499_0,341_0").then((res)=>{
+    console.log(options)
+    if(options.join=="nowbuy"){
+      wx.request({
+        url: 'https://hua512.com/?s=api/order/buyNow&goods_num=1&goods_sku_id=0&wxapp_id=10001&token=4fb1a200e7dbd6ad9590a09842c7b5cd',
+        data: {
+          goods_id: id
+        },
+        success: function (res) {
+          that.setData({
+            orderInfo: res.data.data
+          })
+
+        }
+      })
+      return
+    }
+    addressList(id).then((res)=>{
       console.log(res.data.data);
       this.setData({
         orderInfo:res.data.data

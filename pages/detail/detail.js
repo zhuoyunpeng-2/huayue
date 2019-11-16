@@ -46,6 +46,14 @@ Page({
       url: '/pages/cart/cart',
     })
   },
+  goorder(e){
+    var id = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: '/pages/order/order?join=' + "nowbuy" + "&id=" + id,
+    })
+   
+    
+  },
   addBuy(e){
     var that = this
     console.log(e.currentTarget.dataset.id)

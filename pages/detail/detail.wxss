@@ -195,6 +195,9 @@
 .com-ps{
   height: 40rpx !important;
   line-height: 40rpx !important;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis
 }
 .huayu{
    width: 100%;
