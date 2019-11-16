@@ -85,11 +85,14 @@ page{
   border-left: 6rpx solid #000;
   padding-left: 10rpx;
   box-sizing: border-box;
+  margin-bottom: 20rpx;
 }
 .mx-content{
+
   width: 100%;
   font-size: 24rpx;
   box-sizing: border-box;
+ 
 }
 
 .mx-content .mx-content-top{
@@ -98,12 +101,14 @@ page{
   display: flex;
   box-sizing: border-box;
  padding: 0 10rpx;
+  
 }
 .mx-content .mx-content-s{
   width: 210rpx;
   height: 260rpx;
   border-radius: 10rpx;
   position: relative;
+  margin: 0 auto;
    padding: 0 10rpx;
    overflow: hidden;
 }
