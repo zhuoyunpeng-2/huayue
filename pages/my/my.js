@@ -102,9 +102,9 @@ Page({
   },
   goAddress(){
     //Address
-    // wx.navigateTo({
-    //   url: '/pages/addressList/addressList',
-    // })
+    wx.navigateTo({
+      url: '/pages/addressList/addressList',
+    })
   },
   goGiveMoney(){
     //allOrder

@@ -7,12 +7,12 @@
     "pages/order/order",
     "pages/detail/detail",
     "pages/moreCom/moreCom",
-    "pages/selecteAddress/selecteAddress",
     "pages/allOrder/allOrder",
     "pages/sendFlower/sendFlower",
     "pages/orderDetail/orderDetail",
     "pages/backOrder/backOrder",
-    "pages/Address/Address"
+    "pages/addressList/addressList",
+    "pages/dsa/dsa"
   ],
   "window": {
     "backgroundTextStyle": "light",
