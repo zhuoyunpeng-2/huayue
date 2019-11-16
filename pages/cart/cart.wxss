@@ -1,1 +1,227 @@
 /* pages/cart/cart.wxss */
+@import "../../wxParse/wxParse.wxss";
+
+page {
+  background: #f4f4f4;
+}
+
+.text {
+  height: 80rpx;
+  line-height: 80rpx;
+  box-sizing: border-box; 
+}
+.text .cut{
+  display:block;
+  width: 100rpx;
+  height: 80rpx;
+  /* background: red; */
+  float: right;
+  font-size: 38rpx;
+  position: relative;
+}
+.text .cut .bianji{
+   position: absolute;
+   left: 0;
+   top: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 38rpx;
+  background:#f4f4f4; 
+  z-index: 2;
+}
+.text .cut .wancheng{
+   position: absolute;
+   left: 0;
+   top: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 38rpx;
+   background:#f4f4f4; 
+}
+.product {
+  display: flex;
+  flex-direction: column;
+}
+
+.pro-item {
+  background: #fff;
+  height: 240rpx;
+  border-bottom: 1rpx solid #cccc;
+  display: flex;
+}
+
+.left {
+  display: flex;
+  width: 380rpx;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left .select {
+  background: url(http://nos.netease.com/mailpub/hxm/yanxuan-wap/p/20150730/style/img/icon-normal/checkbox-0e09baa37e.png)no-repeat center center;
+  width: 40rpx;
+  height: 40rpx;
+  background-size: 40rpx 40rpx;
+  margin: 10rpx;
+}
+
+.left image {
+  width: 180rpx;
+  height: 180rpx;
+}
+
+/* .left .wxParse-p{
+  width: 200rpx;
+  height: 200rpx;
+}
+.left .wxParse-p image{
+  width: 200rpx;
+  height: 200rpx;
+} */
+
+.right {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 25rpx;
+}
+
+.right .text {
+  font-size: 28rpx;
+  word-wrap: break-word;
+  height: 100rpx;
+  text-align: left;
+  line-height: 40rpx;
+}
+
+.np {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.np .price {
+  color: #f66;
+  font-weight: 400;
+  font-size: 36rpx;
+}
+
+.num {
+  display: flex;
+}
+
+.num .input {
+  width: 70rpx;
+  border-top: 1rpx solid #f4f4f4;
+  border-bottom: 1rpx solid #f4f4f4;
+  height: 50rpx;
+  min-height: 50rpx !important;
+  line-height: 50rpx !important;
+  text-align: center;
+  font-size: 24rpx;
+}
+
+.num .sub,.num .add {
+  border: 1rpx solid #f4f4f4;
+  width: 60rpx;
+  text-align: center;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 34rpx;
+}
+.share{
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.share image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-right:20rpx; 
+}
+.share .text{
+  font-size: 30rpx;
+}
+.bottom-suan{
+  width: 100%;
+  height: 100rpx;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+.bottom-suan .left {
+  display: flex;
+  height: 100%;
+  width: 300rpx;
+}
+.left .selectAll{
+ background: url(http://nos.netease.com/mailpub/hxm/yanxuan-wap/p/20150730/style/img/icon-normal/checkbox-0e09baa37e.png)no-repeat center center;
+   width: 40rpx;
+  height: 40rpx;
+  background-size: 40rpx 40rpx;
+  margin: 10rpx;
+}
+.left .sel-text{
+  font-size: 30rpx;
+
+}
+.left .all{
+  font-size:30rpx;
+  color: #ff3366;
+}
+
+.bottom-suan .right{
+  width: 180rpx;
+  height: 100%;
+  text-align: center;
+  font-size: 32rpx;
+  background: #ff3366;
+  color: #fff;
+}
+.bottom-delect{
+  width: 100%;
+  height: 100rpx;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bottom-delect .left{
+  display: flex;
+  height: 100%;
+  width: 120rpx;
+}
+.bottom-delect .right{
+  width: 180rpx;
+  height: 100%;
+  text-align: center;
+  font-size: 32rpx;
+  background: #ff3366;
+  color: #fff;
+}
+.active{
+  z-index: 4;
+}
+
+.beselect{
+   background: url(http://q0zw78ub3.bkt.clouddn.com/gou.png)no-repeat center center;
+   width: 40rpx;
+  height: 40rpx;
+  background-size: 40rpx 40rpx;
+  margin: 10rpx;
+}
+
+.bg{
+  background: #f4f4f4;
+}

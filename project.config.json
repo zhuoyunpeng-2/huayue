@@ -76,29 +76,23 @@
 					"scene": null
 				},
 				{
-<<<<<<< HEAD
-					"id": -1,
-					"name": "pages/sendFlower/sendFlower",
-					"pathName": "pages/sendFlower/sendFlower",
-					"query": "",
-=======
 					"id": 3,
 					"name": "pages/detail/detail",
 					"pathName": "pages/detail/detail",
 					"query": "id=628",
->>>>>>> ec9939d2e6881b0596d6a32b8827bbbacbdf5a65
 					"scene": null
 				},
 				{
 					"id": -1,
-<<<<<<< HEAD
-					"name": "order",
-					"pathName": "pages/orderDetail/orderDetail",
-=======
 					"name": "pages/allOrder/allOrder",
 					"pathName": "pages/allOrder/allOrder",
 					"query": "",
->>>>>>> ec9939d2e6881b0596d6a32b8827bbbacbdf5a65
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "orderDetail",
+					"pathName": "pages/orderDetail/orderDetail",
 					"scene": null
 				}
 			]

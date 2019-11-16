@@ -94,7 +94,7 @@ Page({
         //allOrder
         if(res.confirm){
           wx.navigateTo({
-            url: '/pages/allOrder/allOrder'
+            url: '/pages/backOrder/backOrder'
           })
         }
       }

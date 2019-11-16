@@ -4,12 +4,14 @@
     "pages/category/category",
     "pages/cart/cart",
     "pages/my/my",
+    "pages/order/order",
     "pages/detail/detail",
     "pages/moreCom/moreCom",
     "pages/selecteAddress/selecteAddress",
     "pages/allOrder/allOrder",
     "pages/sendFlower/sendFlower",
-    "pages/orderDetail/orderDetail"
+    "pages/orderDetail/orderDetail",
+    "pages/backOrder/backOrder"
   ],
   "window": {
     "backgroundTextStyle": "light",

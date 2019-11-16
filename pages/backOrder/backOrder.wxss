@@ -1,0 +1,28 @@
+/* pages/allOrder/allOrder.wxss */
+page{
+  background: rgb(238, 233, 233);
+}
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.all-nav{
+  background-color: white;
+   padding:20rpx 20rpx;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.on{
+  border-bottom: 1rpx solid #fa3963;
+  color: #fa3963;
+}
+.allorders{
+  margin-top: 20rpx;
+  position: relative;
+  background-color: white;
+  
+}
+
