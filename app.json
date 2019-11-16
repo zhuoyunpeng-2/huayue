@@ -9,7 +9,9 @@
     "pages/moreCom/moreCom",
     "pages/selecteAddress/selecteAddress",
     "pages/Address/Address",
-    "pages/allOrder/allOrder"
+    "pages/allOrder/allOrder",
+    "pages/addressList/addressList",
+    "pages/dsa/dsa"
   ],
   "window": {
     "backgroundTextStyle": "light",

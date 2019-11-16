@@ -1,5 +1,9 @@
 /**index.wxss**/
 @import "../../wxParse/wxParse.wxss";
+page{
+  width: 100%;
+  box-sizing: border-box;
+}
 .home{
   box-sizing: border-box;
 }
@@ -80,10 +84,10 @@
   background: #fff;
   border-left: 6rpx solid #000;
   padding-left: 10rpx;
+  box-sizing: border-box;
 }
 .mx-content{
   width: 100%;
-  /* height: 948rpx; */
   font-size: 24rpx;
   box-sizing: border-box;
 }
@@ -114,13 +118,15 @@
 .mx-content .mx-content-s image{
   width: 100%;
   height: 100%;
+  
 }
 
 .mx-content .mx-content-bottom{
   width: 100%;
-  height: 200rpx;
+  height: 220rpx;
   display: flex;
   padding: 0 10rpx;
+  box-sizing: border-box;
 }
 
 .mx-content .mx-content-x{
@@ -164,6 +170,7 @@
   padding-left: 10rpx;
   display: flex;
   flex-wrap: wrap;
+  box-sizing: border-box;
 }
 .rexiao .re-sp{
   width: 342rpx;
