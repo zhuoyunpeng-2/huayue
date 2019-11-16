@@ -21,11 +21,11 @@
   <view class="userinfo">
     <view class="name">
       <text>订花人姓名：</text>
-      <input placeholder="选填:  请填入您的姓名"></input>
+      <input placeholder="选填:  请填入您的姓名" bindblur="getname"></input>
     </view>
     <view class="tel">
       <text>订花人电话：</text>
-      <input placeholder="选填:  请填入您的手机号"></input>
+      <input placeholder="选填:  请填入您的手机号" bindblur="gettel"></input>
     </view>
   </view>
   <view class="pro-info">
@@ -48,7 +48,7 @@
   </view>
   <view class="ly">
     <view class="text">贺卡留言：</view>
-    <input value="请输入你的祝福留言(选填)"></input>
+    <input placeholder="请输入你的祝福留言(选填)" bindblur="gettext"></input>
     <view class="tuijian">
       推荐>
     </view>
@@ -72,7 +72,7 @@
       <text class="sfk">实付款：</text>
       <text class="total">￥{{orderInfo.order_total_price}}</text>
     </view>
-    <view class="button">提交订单</view>
+    <view class="button" bindtap="addorder">提交订单</view>
   </view>
   <view class="return">
     <view class="{{isShow?'open active':'open'}}" >

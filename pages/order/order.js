@@ -1,5 +1,5 @@
 // pages/order/order.js
-import {addressList} from "../../api/api.js"
+import { addressList, addorder} from "../../api/api.js"
 Page({
 
   /**
@@ -8,7 +8,11 @@ Page({
   data: {
      orderInfo:null,
      isShow:false,
-     animationData: {}
+     animationData: {},
+     id:"",
+     name:"",
+     tel:13837142292,
+     text:""
   },
 
   /**
@@ -16,10 +20,11 @@ Page({
    */
   onLoad: function (options) {
     console.log(options.id);
-    addressList("499_0,341_0").then((res)=>{
+    addressList(options.id).then((res)=>{
       console.log(res.data.data);
       this.setData({
-        orderInfo:res.data.data
+        orderInfo:res.data.data,
+        id:options.id
       })
     })
   },
@@ -118,7 +123,29 @@ Page({
   },
   toselectadd:function(){
     wx.navigateTo({
-      url: "/pages/selecteAddress/selecteAddress",
+      url: "/pages/addressList/addressList",
+    })
+  },
+  addorder:function(){
+    console.log(this.data.id)
+    addorder(this.data.id,this.data.text,this.data.name,this.data.tel).then((res)=>{
+        console.log(res);
+    })
+  },
+  getname:function(event){
+   this.setData({
+     name: event.detail.value
+   })
+  },
+  gettel: function (event){
+    this.setData({
+      tel: parseInt(event.detail.value) 
+    })
+    console.log(parseInt(event.detail.value) );
+  },
+  gettext: function (event){
+    this.setData({
+      text: event.detail.value
     })
   }
 })
