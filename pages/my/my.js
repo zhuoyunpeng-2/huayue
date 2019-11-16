@@ -103,7 +103,7 @@ Page({
   goAddress(){
     //Address
     // wx.navigateTo({
-    //   url: '/pages/Address/Address',
+    //   url: '/pages/addressList/addressList',
     // })
   },
   goGiveMoney(){

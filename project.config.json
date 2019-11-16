@@ -55,6 +55,9 @@
 			"current": -1,
 			"list": [
 				{
+					"id": 0,
+					"name": "pages/cart/cart",
+					"pathName": "pages/cart/cart",
 					"id": -1,
 					"name": "pages/my/my",
 					"pathName": "pages/my/my",
@@ -70,6 +73,8 @@
 				},
 				{
 					"id": -1,
+					"name": "pages/Address/Address",
+					"pathName": "pages/Address/Address",
 					"name": "pages/my/my",
 					"pathName": "pages/my/my",
 					"query": "",
