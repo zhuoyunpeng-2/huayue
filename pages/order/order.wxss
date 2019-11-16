@@ -1,0 +1,213 @@
+/* pages/order/order.wxss */
+page{
+  background: #f4f4f4;
+}
+.box{
+  padding-bottom:80rpx; 
+}
+.top{
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 8rpx solid  #999999;
+}
+.address{
+  height: 150rpx;
+  width: 85%;
+  display: flex;
+}
+.address .left{
+  width: 130rpx;
+  text-align: center;
+  background: url(http://q0zw78ub3.bkt.clouddn.com/%E5%9C%B0%E5%9D%80.png) no-repeat center center;
+  background-size: 45rpx 45rpx;
+}
+.address .right{
+  display: flex;
+  flex-direction: column;
+  line-height: 40rpx;
+  justify-content: center;
+}
+.right .name{
+  font-size: 32rpx;
+}
+.right .ad{
+  font-size: 32rpx;
+  color: #999999;
+}
+.top .select{
+  width: 80rpx;
+  height: 45rpx;
+  background: url(http://q0zw78ub3.bkt.clouddn.com/%E5%8F%B3%E7%AE%AD%E5%A4%B4.png) no-repeat center center;
+  background-size:45rpx 45rpx; 
+}
+.time{
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  margin: 20rpx 0;
+  height: 80rpx;
+  align-items: center;
+  font-size: 34rpx;
+}
+.time .left{
+  margin-left:20rpx; 
+}
+.time .right{
+  display: flex;
+  align-items: center;
+}
+
+.jiantou{
+  display: inline-block;
+  width: 45rpx;
+  height: 45rpx;
+  background: url(http://q0zw78ub3.bkt.clouddn.com/%E5%8F%B3%E7%AE%AD%E5%A4%B4.png) no-repeat center center;
+  background-size:40rpx 40rpx; 
+}
+.userinfo{
+  width: 100%;
+  background: #ffff;
+  display: flex;
+  flex-direction: column;
+  font-size: 34rpx;
+  justify-content: center;
+}
+.userinfo .name{
+  display: flex;
+  height: 80rpx;
+  align-items: center;
+  border: 1rpx solid #f4f4f4;
+}
+.userinfo .tel{
+  display: flex;
+  height: 80rpx;
+   align-items: center;
+}
+.userinfo .name>text,.userinfo .tel>text{
+  margin-left:20rpx;
+  margin-right:40rpx;  
+}
+.pro-info{
+  background: #fff;
+  margin-top: 20rpx;
+}
+.pro-info .product{
+  height: 180rpx;
+  width: 100%;
+  display: flex;
+  padding: 20rpx;
+    box-sizing: border-box;
+   border: 1rpx solid #f4f4f4;
+}
+.product image{
+  width: 180rpx;
+  height: 180rpx;
+  margin-right:20rpx; 
+}
+.product .con{
+  width: 500rpx;
+  font-size: 32rpx;
+}
+.con .goods_name{
+  line-height: 50rpx;
+}
+.con .total{
+  margin-top:20rpx; 
+  display: flex;
+}
+.total .price{
+  color: #ff6666;
+}
+.total .num{
+  font-size: 28rpx;
+  align-self: flex-end;
+  color: #999999;
+}
+.hj{
+  height: 60rpx;
+}
+.hj .con{
+  width: 400rpx;
+  height: 60rpx;
+  float: right;
+  font-size: 32rpx;
+  display: flex;
+  align-items: center;
+}
+.con .num{
+  color: #999999;
+}
+.con .total{
+  color: #ff6666;
+  margin-top: 12rpx;
+}
+
+.ly{
+  display: flex;
+  margin-top: 20rpx;
+  background: #fff;
+  height: 120rpx;
+  font-size: 32rpx;
+  padding: 10rpx;
+  box-sizing: border-box;
+}
+.ly .text{
+  margin-right: 40rpx; 
+}
+.ly input{
+  height: 100rpx;
+  width: 420rpx;
+  background: #f4f4f4;
+}
+.ly .tuijian{
+  margin-left: 20rpx;
+}
+.other{
+  height: 210rpx;
+  background: #fff;
+  margin-top: 20rpx;
+  }
+.other>view{
+  height: 70rpx;
+  border: 1rpx solid #f4f4f4;
+  display: flex;
+  justify-content: space-between;
+  font-size: 32rpx;
+  align-items: center;
+  padding:0 10rpx;
+  box-sizing: border-box; 
+}
+.other .total,.other .send{
+   color: #ff6666;
+}
+.postorder{
+  height: 80rpx;
+  background: #fff;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 32rpx;
+  align-items: center;
+}
+.postorder .text{
+margin-left: 20rpx;
+}
+.postorder .text .sfk{
+  color: #999999;
+}
+.postorder .text .total{
+  color: #ff6666;
+}
+.postorder .button{
+   width: 200rpx;
+   background: #ff3366;
+   height: 100%;
+   text-align: center;
+   color: #fff;
+   line-height:80rpx;
+}

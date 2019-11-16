@@ -1,18 +1,25 @@
-// pages/login/login.js
+// pages/order/order.js
+import {addressList} from "../../api/api.js"
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+     orderInfo:null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options.id);
+    addressList(options.id).then((res)=>{
+      console.log(res.data.data);
+      this.setData({
+        orderInfo:res.data.data
+      })
+    })
   },
 
   /**
@@ -63,13 +70,7 @@ Page({
   onShareAppMessage: function () {
 
   },
-  getUserInfo(res){
-    console.log(res);
-    wx.setStorageSync("userInfo", res.detail.userInfo);
-    wx.setStorageSync("isLogin", true);
-    wx.navigateBack({
-
-    })
+  selectTime:function(){
+    console.log("展示日历")
   }
-  
 })

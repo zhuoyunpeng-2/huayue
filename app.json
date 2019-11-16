@@ -4,8 +4,12 @@
     "pages/category/category",
     "pages/cart/cart",
     "pages/my/my",
+    "pages/order/order",
+    "pages/detail/detail",
+    "pages/moreCom/moreCom",
     "pages/selecteAddress/selecteAddress",
-    "pages/Address/Address"
+    "pages/Address/Address",
+    "pages/allOrder/allOrder"
   ],
   "window": {
     "backgroundTextStyle": "light",

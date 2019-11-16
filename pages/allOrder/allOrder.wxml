@@ -1,0 +1,48 @@
+<!--pages/allOrder/allOrder.wxml-->
+<view class="allorders">
+  <view class="nav">
+    <view bindtap="myshowModal" data-id="{{index}}" class="{{currentIndex===index?'all-nav on':'all-nav'}}" wx:for='{{navList}}' wx:key='{{index}}'>{{item}}
+    </view>
+  </view>
+  <view class="allpro" hidden="{{currentIndex>1}}">
+    <view class="status">
+      <view class="status-text">订单状态</view>
+      <view class="status-now">{{productList.pay_status.text}}</view>
+    </view>
+    <view class="orderId">
+      <view class="order-id">
+         订单号:{{productList.order_no}}
+      </view>
+      <view class="order-data">
+        {{productList.create_time}}
+      </view>
+    
+   </view>
+    <view class="pro-pos">
+      <view class="pro-img" wx:for="{{productList.goods}}" wx:key="{{index}}">
+      
+         <image src="{{item.image.file_path}}"></image>
+      
+       
+      </view>
+      <view class="prosum">
+      共{{productList.goods.length}}件 >
+      </view>
+    
+    </view>
+    <view class="sum">
+      <view class="allPri">
+        <view class="heji">合计：</view>
+        <view class="price">￥{{productList.pay_price}}</view>
+      </view>
+      <view class="isfukuan">
+        <view class="cancel">取消</view>
+        <view class="confir">付款</view>
+      </view>
+    
+    </view>
+  </view>
+
+
+</view>
+
