@@ -1,0 +1,12 @@
+<!--pages/backOrder/backOrder.wxml-->
+<!--pages/allOrder/allOrder.wxml-->
+<view class="allorders">
+  <view class="nav">
+    <view bindtap="myshowModal" data-id="{{index}}" class="{{currentIndex===index?'all-nav on':'all-nav'}}" wx:for='{{navList}}' wx:key='{{index}}'>{{item}}
+    </view>
+  </view>
+ 
+
+</view>
+
+

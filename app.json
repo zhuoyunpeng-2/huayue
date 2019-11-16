@@ -8,6 +8,9 @@
     "pages/detail/detail",
     "pages/moreCom/moreCom",
     "pages/allOrder/allOrder",
+    "pages/sendFlower/sendFlower",
+    "pages/orderDetail/orderDetail",
+    "pages/backOrder/backOrder",
     "pages/addressList/addressList",
     "pages/dsa/dsa"
   ],

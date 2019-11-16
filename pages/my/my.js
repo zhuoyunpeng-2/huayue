@@ -14,20 +14,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    //判断是否登陆
-    var isLogin = wx.getStorageSync("isLogin");
-    if (!isLogin) {
-      //如果没有登录，显示登录框
-      this.setData({
-        isshowModel: true
-      })
-    } else {
-      //肯定已经含有用户信息了
-      this.setData({
-        isShow: true,
-        userInfo: wx.getStorageSync("userInfo")
-      })
-    }
     
   },
 
@@ -42,7 +28,21 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    //判断是否登陆
+    var isLogin = wx.getStorageSync("isLogin");
+    if (!isLogin) {
+      //如果没有登录，显示登录框
+      this.setData({
+        isshowModel: true
+      })
+    } else {
+      //肯定已经含有用户信息了
+      this.setData({
+        isShow: true,
+        userInfo: wx.getStorageSync("userInfo")
+      })
+    }
+
   
   },
 
@@ -93,6 +93,23 @@ Page({
   cancle(){
     this.setData({
       isshowModel: false
+    })
+  },
+  goSendFlower(){
+    wx.navigateTo({
+      url: '/pages/sendFlower/sendFlower'
+    })
+  },
+  goAddress(){
+    //Address
+    wx.navigateTo({
+      url: '/pages/addressList/addressList',
+    })
+  },
+  goGiveMoney(){
+    //allOrder
+    wx.navigateTo({
+      url: '/pages/allOrder/allOrder',
     })
   }
 })
