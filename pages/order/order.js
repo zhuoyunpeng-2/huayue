@@ -1,30 +1,50 @@
 // pages/order/order.js
-import { addressList, addorder} from "../../api/api.js"
+import { addressList, addorder } from "../../api/api.js"
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-     orderInfo:null,
-     isShow:false,
-     animationData: {},
-     id:"",
-     name:"",
-     tel:13837142292,
-     text:""
+    orderInfo: null,
+    isShow: false,
+    animationData: {},
+    id: "",
+    name: "",
+    tel: 13837142292,
+    text: ""
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this
+    var id = options.id
     console.log(options.id);
-    addressList(options.id).then((res)=>{
-      console.log(res.data.data);
-      this.setData({
-        orderInfo:res.data.data,
-        id:options.id
+    addressList(options.id).then((res) => {
+      console.log(options)
+      if (options.join == "nowbuy") {
+        wx.request({
+          url: 'https://hua512.com/?s=api/order/buyNow&goods_num=1&goods_sku_id=0&wxapp_id=10001&token=4fb1a200e7dbd6ad9590a09842c7b5cd',
+          data: {
+            goods_id: id
+          },
+          success: function (res) {
+            that.setData({
+              orderInfo: res.data.data
+            })
+
+          }
+        })
+        return
+      }
+      addressList(id).then((res) => {
+        console.log(res.data.data);
+        this.setData({
+          orderInfo: res.data.data,
+          id: options.id
+        })
       })
     })
   },
@@ -77,30 +97,30 @@ Page({
   onShareAppMessage: function () {
 
   },
-  selectTime:function(){
+  selectTime: function () {
     console.log("展示日历")
   },
-  open:function(){
+  open: function () {
     var animation = wx.createAnimation({
       duration: 1000,
       timingFunction: 'ease',
     });
-    if(!this.data.isShow){
+    if (!this.data.isShow) {
       animation.rotate(-45).step();
       this.setData({
         animationData: animation.export(),
         isShow: !this.data.isShow
       })
-    }else{
+    } else {
       animation.rotate(0).step();
       this.setData({
         animationData: animation.export(),
-        isShow: !this.data.isShow  
+        isShow: !this.data.isShow
       })
-    } 
-  
+    }
+
   },
-  toindex:function(){
+  toindex: function () {
     console.log("去首页")
     wx.switchTab({
       url: '/pages/index/index',
@@ -121,29 +141,29 @@ Page({
       url: '/pages/my/my',
     })
   },
-  toselectadd:function(){
+  toselectadd: function () {
     wx.navigateTo({
       url: "/pages/addressList/addressList",
     })
   },
-  addorder:function(){
+  addorder: function () {
     console.log(this.data.id)
-    addorder(this.data.id,this.data.text,this.data.name,this.data.tel).then((res)=>{
-        console.log(res);
+    addorder(this.data.id, this.data.text, this.data.name, this.data.tel).then((res) => {
+      console.log(res);
     })
   },
-  getname:function(event){
-   this.setData({
-     name: event.detail.value
-   })
-  },
-  gettel: function (event){
+  getname: function (event) {
     this.setData({
-      tel: parseInt(event.detail.value) 
+      name: event.detail.value
     })
-    console.log(parseInt(event.detail.value) );
   },
-  gettext: function (event){
+  gettel: function (event) {
+    this.setData({
+      tel: parseInt(event.detail.value)
+    })
+    console.log(parseInt(event.detail.value));
+  },
+  gettext: function (event) {
     this.setData({
       text: event.detail.value
     })

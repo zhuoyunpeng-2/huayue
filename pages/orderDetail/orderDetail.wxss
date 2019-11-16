@@ -147,15 +147,17 @@ box-sizing: border-box;
 }
 .product .right .name{
   width: 100%;
-  height: 100rpx;
+  height: 120rpx;
 }
 .product .right .p_n{
   width: 100%;
   height: 60rpx;
+  margin-top: 15rpx;
 }
 .product .right .p_n .price{
   color: #EF3F6B;
   margin-right: 10rpx;
+  margin-top: 35rpx;
 }
 .product .right .p_n .num{
   color: gray;
@@ -165,7 +167,7 @@ box-sizing: border-box;
   height: 60rpx;
 }
 .all .con{
-  width: 320rpx;
+  width: 350rpx;
   height: 100%;
   float: right;
 }

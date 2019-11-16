@@ -32,10 +32,10 @@
     </view>
     <view class="smallcart"  catchtap="gobuycart">
       <image src="../../images/cart.png"></image>
-      <view class="Num">0</view>
+      <view class="Num">{{num.goods_count_in_order}}</view>
     </view>
-    <view class="addcar">加入购物车</view>
-    <view class="buynow">立即购买</view>
+    <view class="addcar" catchtap="addBuy" data-id="{{detaiList.detail.goods_id}}">加入购物车</view>
+    <view class="buynow" catchtap="goorder" data-id="{{detaiList.detail.goods_id}}">立即购买</view>
   </view>
 
   <!-- 评论 -->

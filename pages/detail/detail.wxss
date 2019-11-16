@@ -139,55 +139,65 @@
   color: white
 }
 .comment{
-  display: flex !important;
-  flex-direction: column !important;
+  
   margin-top: 15rpx !important;
   background: white !important;
-   height: 430rpx !important;
+   height: 400rpx !important;
   overflow: hidden !important;
 
 }
 .comment .com-title{
   display: flex !important;
   justify-content: space-between !important;
-  align-items: center !important;
-  
+  height: 100rpx !important;
+  line-height: 100rpx;
   padding: 0 15rpx !important;
   border-bottom: 1rpx solid rgb(211, 211, 211) !important;
 }
 .comment .com-title .com-title-top{
-  line-height: 100rpx !important;
-  height: 100rpx !important;
+  
   font-size: 30rpx !important;
 }
 .comment .com-title .more{
- line-height: 100rpx !important;
-  height: 100rpx !important;
+ 
 }
 
 .juti{
-  display: flex !important;
-  flex-direction: column !important;
-  padding: 20rpx 20rpx !important;
-  border-bottom: 1rpx solid rgb(211, 211, 211) !important;
-  height: 150rpx !important;
-  justify-content: center !important;
-  font-size: 28rpx !important
+  height:100rpx;
+  border-bottom: 1rpx solid #ccc;
+  display: block;
+  padding: 0 20rpx;
+  line-height: 100rpx;
+
 }
 .juti .juti-top{
   display: flex !important;
+  align-items: center;
   padding: 15rpx 0 !important;
-  color: #ccc !important
+  color: #ccc !important;
+  height: 40rpx !important;
+  line-height: 40rpx !important;
+  box-sizing: border-box
 }
 .juti .juti-top .user{
-  margin-right: 10rpx !important;
+  padding-right: 10rpx !important;
+  height: 40rpx !important;
+  display: block;
 }
 .juti .juti-top .start{
-  display: flex !important
+  display: flex !important;
+  
 }
 .start image{
   width: 20rpx;
   height: 20rpx;
+}
+.com-ps{
+  height: 40rpx !important;
+  line-height: 40rpx !important;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis
 }
 .huayu{
    width: 100%;
@@ -207,10 +217,11 @@
 }
 .yu{
   margin-right: 15rpx;
-  width: 10%;
+  width: 15%;
+  text-align: center
 }
 .yu-cont{
-  width: 90%;
+  width: 85%;
   padding: 10rpx 0;
   box-sizing: border-box;
   border-bottom: 1rpx solid rgb(211, 211, 211);

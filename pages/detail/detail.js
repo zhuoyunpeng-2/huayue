@@ -1,5 +1,6 @@
 // pages/detail/detail.js
 var WxParse = require('../../wxParse/wxParse.js');
+import {getcartList} from "../../api/api.js"
 Page({
 
   /**
@@ -8,7 +9,8 @@ Page({
   data: {
       id:null,
       detaiList:[],
-      productAll:''
+      productAll:'',
+      num:[]
       
   },
 
@@ -44,6 +46,57 @@ Page({
       url: '/pages/cart/cart',
     })
   },
+  goorder(e){
+    var id = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: '/pages/order/order?join=' + "nowbuy" + "&id=" + id,
+    })
+   
+    
+  },
+  addBuy(e){
+    var that = this
+    console.log(e.currentTarget.dataset.id)
+    var id = e.currentTarget.dataset.id
+    wx.request({
+      method:'post',
+      url: 'https://hua512.com/?s=api/cart/add/',
+      data:{
+        goods_id: id,
+        goods_num: 1,
+        goods_sku_id: 0,
+        wxapp_id: 10001,
+        token: "4fb1a200e7dbd6ad9590a09842c7b5cd",
+      },
+     
+      success:function(res){
+        
+        var msg = res.data.msg
+       
+        console.log(msg)
+        console.log(res.data)
+        if (msg !="很抱歉，商品库存不足"){
+          getcartList().then((res) => {
+            console.log(res.data.data)
+            that.setData({
+              num: res.data.data
+            })
+          })
+          wx.showToast({
+            title: "添加购物车成功",
+          })
+         
+        }else{
+         
+          wx.showToast({
+            title: '很抱歉，商品库存不足',
+            icon:"none"
+          })
+        }
+       
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -55,7 +108,31 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    var that = this
+    getcartList().then((res)=>{
+      console.log(res.data.data)
+      that.setData({
+          num: res.data.data
+        })
+    })
+    // var that =this
+    // wx.request({
+    //   method: 'post',
+    //   url: 'https://hua512.com/?s=api/cart/add/',
+    //   data: {
+    //     goods_id: 628,
+    //     goods_num: 1,
+    //     goods_sku_id: 0,
+    //     wxapp_id: 10001,
+    //     token: "4fb1a200e7dbd6ad9590a09842c7b5cd",
+    //   },
+    //   success:function(res){
+    //     console.log(res)
+    //     that.setData({
+    //       num: res.data.data.cart_total_num
+    //     })
+    //   }
+    // })
   },
 
   /**

@@ -25,14 +25,20 @@ Page({
     wx.request({
       url: 'https://hua512.com/?s=api/user.order/lists&dataType=payment&wxapp_id=10001&token=4fb1a200e7dbd6ad9590a09842c7b5cd',
       success:function(res){
-        console.log(res.data.data.list[0].goods[0].image)
+        console.log(res.data.data.list[0])
         that.setData({
-          productList:res.data.data.list[0]
+          productList:res.data.data.list
         })
       }
     })
   },
-
+  godetail(e){
+    var id = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: '/pages/orderDetail/orderDetail?id='+id,
+    })
+    
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
