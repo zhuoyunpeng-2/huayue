@@ -1,34 +1,26 @@
-// pages/Address/Address.js
+// pages/allOrder/allOrder.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    isShow:true,
-    address:'dsad',
-    isYou:false
+    navList: ["全部", "待付款", "待发货", "待收货", "待评价"],
+    currentIndex: 0
   },
+  myshowModal(e) {
+    var that = this
+    var index = e.currentTarget.dataset.id
+    that.setData({
+      currentIndex: index
+    })
 
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var address=wx.getStorageSync('address')
-    console.log(address)
-    if(address){
-      
-    this.setData({
-      isShow: false,
-      address:address
-    })
-    console.log(this.data.address)
-    }else{
-      this.setData({
-        
-        addList:address
-      })
-    }
+    
   },
 
   /**
@@ -42,13 +34,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    if(this.data.address){
 
-    }else{
-      this.setData({
-        isYou:true
-      })
-    }
   },
 
   /**
@@ -84,11 +70,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  goselecteAddress:function(){
-    console.log("dsa")
-    wx.navigateTo({
-      url: '/pages/selecteAddress/selecteAddress',
-    })
   }
 })

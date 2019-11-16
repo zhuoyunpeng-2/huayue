@@ -1,0 +1,84 @@
+/* pages/sendFlower/sendFlower.wxss */
+.flower{
+
+}
+.flower .every{
+  width: 100%;
+  height: 800rpx
+}
+.flower .every .title{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  padding: 10rpx;
+  box-sizing: border-box;
+}
+.flower .every .title .left{
+  width: 200rpx;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.flower .every .title .left .null{
+  width: 10rpx;
+  height: 30rpx;
+  background: #424D48;
+  margin-right: 20rpx;
+}
+.flower .every .title .left>text{
+  font-size: 38rpx;
+  color: black;
+  font-weight: 500;
+}
+.flower .every .title .right{
+  width: 150rpx;
+  height: 100%;
+  text-align: center;
+  line-height: 80rpx;
+}
+
+.category{
+
+}
+.category .c_flower{
+  width: 100%;
+  height: 220rpx;
+  display: flex;
+  border-bottom: 1rpx solid #ECECEC;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.category .c_flower .left{
+  width: 180rpx;
+  height: 150rpx;
+  margin-right: 20rpx;
+}
+.category .c_flower .left image{
+  width: 180rpx;
+  height: 150rpx;
+}
+.category .c_flower .right{
+  width: 500rpx;
+  height: 180rpx;
+}
+.category .c_flower .right .problem{
+width: 100%;
+min-height: 70rpx;
+display: block;
+}
+.category .c_flower .right .content{
+  width: 100%;
+  height: 90rpx;
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 30rpx;
+  color: gray;
+  line-height: 50rpx;
+}
+.after{
+  width: 100%;
+  height: 20rpx;
+  background: #F7F7F7;
+}
