@@ -1,0 +1,24 @@
+<view class="SSceh">
+
+  <form class='searchForm' bindsubmit='searchSubmitFn'>
+     <view class="seach">
+      <image src="../../../images/seach.png"></image>
+      <input  placeholder='请输入您要搜索的商品' class='topInput' name='input' class="inp"/>
+      <button formType='submit' class='searchBtn' class="btn" bindtap="seach">搜索</button>
+      </view>
+</form>
+
+<view class='historyContent'>
+    <view class='title'>
+      <h class='title-left'>最近搜索</h>
+      <image src='../../../images/del.png' class='deleteIcon' bindtap='historyDelFn' ></image>
+    </view>
+    <view class='htrItemContent'>
+      <view wx:for="{{searchRecord}}" wx:key='{{item}}'>
+        <view class='htrItem'>{{item.value}}</view>
+      </view> 
+      <view class='noHistoryItem' wx:if="{{searchRecord.length==0}}">你还没有搜索记录</view>
+    </view>
+  </view>
+
+</view>

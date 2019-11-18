@@ -1,10 +1,14 @@
 // pages/category/category.js
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+      list:[],
+      currentIndex:0,
+      childList:[]
 
   },
 
@@ -12,7 +16,21 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that = this;
+    
+    wx.request({
+      url: "https://hua512.com/?s=/api_wap/category/index&wxapp_id=10018&sign=2228aa244438551c61f9c929b9a9e8e0&token=",
+      success: function (res) {
+      
+        that.setData({
+          list: res.data.data.list,
+          childList: res.data.data.list[0].child
+         
+      
+        })
+        console.log(that.data.list)
+      }
+    })
   },
 
   /**
@@ -62,5 +80,25 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  selectOne(event){
+    var index = event.currentTarget.dataset.index;
+this.setData({
+currentIndex:index,
+  childList: this.data.list[index].child
+})
+
+
+  },
+titSeach:function(){
+  wx.navigateTo({
+    url: './seach/seach',
+  })
+},
+index (event) {
+  var id =event.currentTarget.dataset.id
+    wx.navigateTo({
+      url: './index/index?id='+id,
+    })
   }
 })

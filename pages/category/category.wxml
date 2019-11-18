@@ -1,2 +1,25 @@
-<!--pages/category/category.wxml-->
-<text>pages/category/category.wxml</text>
+<view class="category">
+  <!-- 搜索框 -->
+  <view class="seach" >
+    <image src=" ../../images/seach.png"></image>
+    <view class="inp"  bindtap="titSeach" >搜索商品</view>
+
+  </view>
+  <!-- 内容 -->
+  <view class="content">
+    <scroll-view class="content-left" scroll-y="true">
+      <view bindtap="selectOne" data-index="{{index}}"class="{{currentIndex===index?'sv-item active':'sv-item'}}" wx:for="{{list}}">
+        {{item.name}}
+      </view>
+    </scroll-view>
+    <!-- 右边内容 -->
+    <scroll-view class="content-right" scroll-y="true">
+      <view class="all-items" bindtap="index"  data-id="{{item.id}}">
+        <view class="rg-item" wx:for="{{childList}}">
+          <image src="{{item.image.file_path}}"></image>
+          <text>{{item.name}}</text>
+        </view>
+      </view> 
+    </scroll-view>
+  </view>
+</view>

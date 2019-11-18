@@ -12,7 +12,9 @@
     "pages/orderDetail/orderDetail",
     "pages/backOrder/backOrder",
     "pages/addressList/addressList",
-    "pages/dsa/dsa"
+    "pages/dsa/dsa",
+    "pages/category/seach/seach",
+    "pages/category/index/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

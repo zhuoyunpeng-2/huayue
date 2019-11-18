@@ -1,1 +1,82 @@
 /* pages/category/category.wxss */
+
+page {
+  height: 100%;
+}
+
+.seach {
+  display: flex;
+  width: 96%;
+  background: #ededed;
+  height: 66rpx;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40rpx;
+  margin-bottom: 40rpx;
+}
+
+.category {
+  height: 100%;
+}
+
+.sv-item {
+  width: 230rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+ 
+}
+
+.active {
+  color: #ff7182;
+  background: white;
+  font-size: 34rpx;
+}
+.content-left {
+  width: 230rpx;
+  height: 100%;
+  background: #F8F8F8
+}
+.content {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  border-top: 1rpx solid #ededed;
+    height: calc(100% - 106rpx);
+}
+
+.seach image {
+  width: 44rpx;
+  height: 44rpx;
+}
+
+
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.rg-item{
+  display: flex;
+  flex-direction: column;
+  width: calc(100%/3);
+align-items: center;
+
+}
+.content-right image{
+  height: 160rpx;
+  width: 100%;
+}
+.all-items {
+  display: flex;
+  flex-wrap: wrap;
+}
+.rg-item {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% / 3);
+  align-items: center;
+  padding-top:50rpx
+}

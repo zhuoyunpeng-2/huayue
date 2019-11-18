@@ -1,0 +1,52 @@
+
+<import src="../../../wxParse/wxParse.wxml"/>
+<view class="index">
+ <!-- 搜索框 -->
+  <view class="seach" >
+    <image src=" ../../../images/seach.png"></image>
+    <input placeholder='搜索商品' class="inp"  bindtap="titSeach" ></input>
+
+  </view>
+<image src=" ../../../images/yangshi.png"  class="change"></image>
+<!-- 排序页面 -->
+
+<view class="px" bindtap="selectOne" data-index="{{index}}"class="{{currentIndex===index?'px active':'px'}}">
+<view class="fl">综合</view>
+<view class="fl">销量</view>
+<view class="fl">价格</view>
+
+
+</view>
+
+<!-- 主要内容 -->
+
+<view>
+<scroll-view class="content" scroll-y="true">
+      <view class="all-items" bindtap="index">
+        <view class="rg-item" wx:for="{{list}}">
+          <image src="{{item.image[0].file_path}}"></image>
+          <text class="syn">{{item.goods_jianjie}}</text>
+          <text class="pires">{{item.goods_max_price}}</text>
+        </view>
+      </view> 
+    </scroll-view>
+
+
+
+</view>
+
+<!-- 富文本 -->
+<!-- <view wx:for="{{list}}">
+<view></view>
+<image src="{{item.image[0].file_path}}"></image>
+<image src="{{item.image[1].file_path}}"></image>
+<image src="{{item.image[2].file_path}}"></image>
+</view> -->
+
+</view>
+
+
+
+<!-- arrow_up_down.png 默认图片 --> 
+<!-- arrow_up_active.png 上箭头 -->
+<!-- arrow_down_active.png  下箭头 -->

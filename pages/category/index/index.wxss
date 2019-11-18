@@ -1,0 +1,79 @@
+@import "../../../wxParse/wxParse.wxss";
+
+.seach {
+  display: flex;
+  width: 76%;
+  background: #ededed;
+  height: 66rpx;
+  margin: 0 auto;
+  align-items: center;
+  border-radius: 40rpx;
+  margin-bottom: 20rpx;
+  position: relative;
+}
+
+.seach image {
+  width: 44rpx;
+  height: 44rpx;
+}
+
+.change {
+  width: 54rpx;
+  height: 54rpx;
+  position: absolute;
+  right: 20rpx;
+  top: 8rpx;
+}
+
+.px {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.fl {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% / 3);
+  align-items: center;
+  padding-top: 20rpx;
+  border-top: 2rpx solid #ededed;
+}
+
+.active {
+  color: #ff7182;
+  background: white;
+  font-size: 34rpx;
+}
+
+.all-items {
+  display: flex;
+  flex-wrap: wrap;
+}
+.content{
+  margin-top: 20rpx
+}
+.rg-item {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden
+}
+
+.rg-item image {
+  width: 340rpx;
+  height: 380rpx;
+}
+
+.syn {
+ 
+  text-overflow: ellipsis;
+ white-space: nowrap;
+ overflow: hidden;
+ width: 290rpx;
+
+}
+.pires{
+  color: #ff7182
+}
